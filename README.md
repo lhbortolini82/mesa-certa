@@ -1,5 +1,9 @@
 # Mesa Certa — Minha Coleção de Jogos
 
+Site: https://lhbortolini82.github.io/mesa-certa/
+
+Repositório: https://github.com/lhbortolini82/mesa-certa
+
 Site estático em português, baseado exclusivamente no pacote V3: 40 jogos-base, cinco perfis, filtros de 2 a 8 pessoas, até dez recomendações por mesa, consulta por jogo e avaliações pessoais. HTML, CSS e JavaScript sem dependências externas, banco de dados, login ou serviço pago.
 
 ## Arquivos e fonte dos dados
