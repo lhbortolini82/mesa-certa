@@ -1,0 +1,10 @@
+.env
+.env.*
+*.pem
+*.key
+.gh/
+node_modules/
+Mesa_Certa_Minhas_Avaliacoes*.json
+backups/
+Thumbs.db
+.DS_Store

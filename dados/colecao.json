@@ -1,0 +1,2953 @@
+{
+  "versao": "2026-11-06",
+  "origem": "Mesa Certa: 40 jogos-base ativos; doações removidas em 06/11/2026. Rankings editoriais complementados por avaliações pessoais salvas localmente.",
+  "perfis": [
+    {
+      "id": "familia",
+      "nome": "Família",
+      "icone": "🏡",
+      "descricao": "Interação, regras simples e familiaridade com carteados."
+    },
+    {
+      "id": "casuais",
+      "nome": "Amigos casuais",
+      "icone": "🎲",
+      "descricao": "Caos, ataques, controle de área e partidas até 90 minutos."
+    },
+    {
+      "id": "estrategicos",
+      "nome": "Amigos estratégicos",
+      "icone": "♟️",
+      "descricao": "Decisões interessantes e planejamento, sem exigir especialistas."
+    },
+    {
+      "id": "casais",
+      "nome": "Namorada e casais",
+      "icone": "💛",
+      "descricao": "Duelo a dois e boas experiências com outros casais."
+    },
+    {
+      "id": "churrasco",
+      "nome": "Churrasco",
+      "icone": "🔥",
+      "descricao": "Risadas, blefe, provocações e explicação rápida."
+    }
+  ],
+  "jogos": [
+    {
+      "id": "survive-the-island",
+      "nome": "Survive: The Island",
+      "jogadores": "2–5",
+      "afinidade": {
+        "familia": "Bom",
+        "casuais": "Muito forte",
+        "estrategicos": "Situacional",
+        "casais": "Bom",
+        "churrasco": "Bom"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "SITUACIONAL",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "BOA",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "POUCO INDICADO",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "SITUACIONAL",
+          "3": "BOA",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "SITUACIONAL",
+          "3": "BOA",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Confronto direto; menos forte com 2.",
+      "fonte": "https://boardgamegeek.com/boardgame/425428/survive-the-island",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "magical-athlete-2025",
+      "nome": "Magical Athlete (2025)",
+      "jogadores": "2–6",
+      "afinidade": {
+        "familia": "Bom",
+        "casuais": "Muito forte",
+        "estrategicos": "Menos indicado",
+        "casais": "Muito forte",
+        "churrasco": "Muito forte"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "SITUACIONAL",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "SITUACIONAL",
+          "6": "SITUACIONAL",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Poderes alteram a corrida; ótimo de 4 a 6.",
+      "fonte": "https://boardgamegeek.com/boardgame/454103/magical-athlete",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "tiranos-da-umbreterna-2021",
+      "nome": "Tiranos da Umbreterna (2021)",
+      "jogadores": "2–4",
+      "afinidade": {
+        "familia": "Menos indicado",
+        "casuais": "Menos indicado",
+        "estrategicos": "Muito forte",
+        "casais": "Situacional",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "PRIORIDADE",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Deckbuilding e controle de área; exige mais explicação.",
+      "fonte": "https://boardgamegeek.com/boardgame/336847/tyrants-of-the-underdark-board-game",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "small-world-of-warcraft",
+      "nome": "Small World of Warcraft",
+      "jogadores": "2–5",
+      "afinidade": {
+        "familia": "Menos indicado",
+        "casuais": "Situacional",
+        "estrategicos": "Muito forte",
+        "casais": "Situacional",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "VAR. comunidade",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "casuais": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "VAR. comunidade",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "estrategicos": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "VAR. comunidade",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "casais": {
+          "2": "POUCO INDICADO",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "VAR. comunidade",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "VAR. comunidade",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        }
+      },
+      "observacao": "Território; 6–8 só com propostas não oficiais.",
+      "fonte": "https://boardgamegeek.com/boardgame/309630/small-world-of-warcraft",
+      "variante": {
+        "sete": "EXPERIMENTAL",
+        "oito": "EXPERIMENTAL",
+        "montagem": "7: seis ilhas para 7 facções (sem teste). 8: quatro duplas, quatro facções.",
+        "ressalva": "Não validada; 7 desaconselhado; 8 duplas não 8 facções.",
+        "parecer": "Não recomendar como mesa principal.",
+        "fonte": "https://boardgamegeek.com/thread/2950562/did-anyone-try-to-play-this-with-6-7-players"
+      },
+      "ajustes": {
+        "6": "Uso de variante da comunidade: não é modo oficial."
+      }
+    },
+    {
+      "id": "clank-catacumbas",
+      "nome": "Clank! Catacumbas",
+      "jogadores": "2–4 (+5–6)",
+      "afinidade": {
+        "familia": "Menos indicado",
+        "casuais": "Situacional",
+        "estrategicos": "Muito forte",
+        "casais": "Bom",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "POUCO INDICADO",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "PRIORIDADE",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "BOA",
+          "6": "BOA",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "SITUACIONAL",
+          "6": "SITUACIONAL",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Bando de Aventureiros é necessário para 5–6; pode alongar.",
+      "fonte": "https://boardgamegeek.com/boardgame/365717/clank-catacombs",
+      "variante": null,
+      "ajustes": {
+        "5": "Requer a expansão Bando de Aventureiros.",
+        "6": "Requer a expansão Bando de Aventureiros."
+      }
+    },
+    {
+      "id": "the-king-is-dead-segunda-edicao",
+      "nome": "The King Is Dead: Segunda Edição",
+      "jogadores": "2–4",
+      "afinidade": {
+        "familia": "Menos indicado",
+        "casuais": "Menos indicado",
+        "estrategicos": "Muito forte",
+        "casais": "Situacional",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "PRIORIDADE",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "SITUACIONAL",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Regras enxutas, decisões densas; exige reflexão.",
+      "fonte": "https://boardgamegeek.com/boardgame/319966/the-king-is-dead-second-edition",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "splendor-pokemon",
+      "nome": "Splendor: Pokémon",
+      "jogadores": "2–4",
+      "afinidade": {
+        "familia": "Bom",
+        "casuais": "Bom",
+        "estrategicos": "Bom",
+        "casais": "Bom",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Estratégia familiar simples, pouco confronto direto.",
+      "fonte": "https://boardgamegeek.com/boardgame/406291",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "ethnos-second-edition",
+      "nome": "Ethnos: Second Edition",
+      "jogadores": "1–6",
+      "afinidade": {
+        "familia": "Situacional",
+        "casuais": "Bom",
+        "estrategicos": "Muito forte",
+        "casais": "Muito forte",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "POUCO INDICADO",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "SITUACIONAL",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "SITUACIONAL",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "BOA",
+          "6": "BOA",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Coleções e controle de área; acessível para estratégia.",
+      "fonte": "https://boardgamegeek.com/boardgame/432527/ethnos-2nd-edition",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "toy-battle",
+      "nome": "Toy Battle",
+      "jogadores": "2–2",
+      "afinidade": {
+        "familia": "Situacional",
+        "casuais": "Muito forte",
+        "estrategicos": "Bom",
+        "casais": "Bom",
+        "churrasco": "Bom"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "SITUACIONAL",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "PRIORIDADE",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "BOA",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "BOA",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "BOA",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Duelo veloz e tático, somente 2 pessoas.",
+      "fonte": "https://boardgamegeek.com/boardgame/434654/toy-battle",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "king-of-tokyo-monster-box",
+      "nome": "King of Tokyo: Monster Box",
+      "jogadores": "2–6",
+      "afinidade": {
+        "familia": "Bom",
+        "casuais": "Muito forte",
+        "estrategicos": "Situacional",
+        "casais": "Muito forte",
+        "churrasco": "Muito forte"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "SITUACIONAL",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "BOA",
+          "6": "BOA",
+          "7": "VAR. comunidade",
+          "8": "VAR. comunidade"
+        },
+        "casuais": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "VAR. comunidade",
+          "8": "VAR. comunidade"
+        },
+        "estrategicos": {
+          "2": "POUCO INDICADO",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "SITUACIONAL",
+          "7": "VAR. comunidade",
+          "8": "VAR. comunidade"
+        },
+        "casais": {
+          "2": "SITUACIONAL",
+          "3": "BOA",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "VAR. comunidade",
+          "8": "VAR. comunidade"
+        },
+        "churrasco": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "VAR. comunidade",
+          "8": "VAR. comunidade"
+        }
+      },
+      "observacao": "Confronto de dados; com 7–8 só variante comunitária.",
+      "fonte": "https://boardgamegeek.com/boardgame/336755/king-of-tokyo-monster-box",
+      "variante": {
+        "sete": "COMUNIDADE",
+        "oito": "COMUNIDADE",
+        "montagem": "Variante publicada por fãs com ajustes para pontuação em Tóquio.",
+        "ressalva": "Eliminações precoces, espera e equilíbrio incerto.",
+        "parecer": "Apenas para turma que já gosta do jogo.",
+        "fonte": "https://boardgamegeek.com/thread/2694001/playing-with-7-plus-players"
+      },
+      "ajustes": {}
+    },
+    {
+      "id": "claim-edicao-limitada",
+      "nome": "Claim: Edição Limitada",
+      "jogadores": "2–4",
+      "afinidade": {
+        "familia": "Bom",
+        "casuais": "Situacional",
+        "estrategicos": "Bom",
+        "casais": "Bom",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "BOA",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "PRIORIDADE",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Vazas; versão da coleção suporta até 4.",
+      "fonte": "https://papergames.com.br/claim-edicao-limitada/",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "cyclades-legendary-edition",
+      "nome": "Cyclades: Legendary Edition",
+      "jogadores": "2–6",
+      "afinidade": {
+        "familia": "Menos indicado",
+        "casuais": "Menos indicado",
+        "estrategicos": "Muito forte",
+        "casais": "Situacional",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "SITUACIONAL",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Para 6, o modo oficial é em 3 duplas; longa duração.",
+      "fonte": "https://boardgamegeek.com/boardgame/380619/cyclades-legendary-edition",
+      "variante": null,
+      "ajustes": {
+        "6": "Modo oficial de 3 equipes de 2; confirmar a configuração na edição."
+      }
+    },
+    {
+      "id": "fliptoons",
+      "nome": "FlipToons",
+      "jogadores": "1–4",
+      "afinidade": {
+        "familia": "Bom",
+        "casuais": "Situacional",
+        "estrategicos": "Situacional",
+        "casais": "Bom",
+        "churrasco": "Situacional"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Jogo visual leve; não exige confronto intenso.",
+      "fonte": "https://boardgamegeek.com/boardgame/449185/fliptoons",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "seas-of-strife",
+      "nome": "Seas of Strife",
+      "jogadores": "3–6",
+      "afinidade": {
+        "familia": "Muito forte",
+        "casuais": "Bom",
+        "estrategicos": "Bom",
+        "casais": "Bom",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "—",
+          "3": "BOA",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "casuais": {
+          "2": "—",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "BOA",
+          "6": "BOA",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "estrategicos": {
+          "2": "—",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "BOA",
+          "6": "BOA",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "casais": {
+          "2": "—",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "BOA",
+          "6": "BOA",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "churrasco": {
+          "2": "—",
+          "3": "POUCO INDICADO",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "SITUACIONAL",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        }
+      },
+      "observacao": "Vazas; adaptações 7–8 alteram a composição do baralho.",
+      "fonte": "https://boardgamegeek.com/boardgame/225482/seas-of-strife",
+      "variante": {
+        "sete": "EXPERIMENTAL",
+        "oito": "EXPERIMENTAL",
+        "montagem": "7: retirar 4 de 60 e dar 8 a cada. 8: retirar 4 e dar 7 a cada.",
+        "ressalva": "Altera naipes/ritmo; proposta não validada.",
+        "parecer": "Priorizar Skull King com 7/8.",
+        "fonte": "https://boardgamegeek.com/boardgame/225482/seas-of-strife"
+      },
+      "ajustes": {}
+    },
+    {
+      "id": "clank-uma-aventura-de-construcao-de-baralho",
+      "nome": "Clank!: Uma Aventura de Construção de Baralho",
+      "jogadores": "2–4 (+5–6)",
+      "afinidade": {
+        "familia": "Menos indicado",
+        "casuais": "Situacional",
+        "estrategicos": "Bom",
+        "casais": "Bom",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "POUCO INDICADO",
+          "3": "SITUACIONAL",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "BOA",
+          "6": "SITUACIONAL",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "SITUACIONAL",
+          "6": "SITUACIONAL",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Bando de Aventureiros necessário para 5–6.",
+      "fonte": "https://boardgamegeek.com/boardgame/201808/clank-a-deck-building-adventure",
+      "variante": null,
+      "ajustes": {
+        "5": "Requer a expansão Bando de Aventureiros.",
+        "6": "Requer a expansão Bando de Aventureiros."
+      }
+    },
+    {
+      "id": "agent-avenue",
+      "nome": "Agent Avenue",
+      "jogadores": "2 ou 4",
+      "afinidade": {
+        "familia": "Situacional",
+        "casuais": "Situacional",
+        "estrategicos": "Bom",
+        "casais": "Muito forte",
+        "churrasco": "Situacional"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "BOA",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "BOA",
+          "3": "SITUACIONAL",
+          "4": "BOA",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "PRIORIDADE",
+          "3": "BOA",
+          "4": "PRIORIDADE",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "BOA",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "3 jogadores: modo oficial 2 contra 1; 4: 2 contra 2.",
+      "fonte": "https://boardgamegeek.com/boardgame/422732/agent-avenue",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "tag-team",
+      "nome": "Tag Team",
+      "jogadores": "2–2",
+      "afinidade": {
+        "familia": "Menos indicado",
+        "casuais": "Situacional",
+        "estrategicos": "Bom",
+        "casais": "Bom",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "POUCO INDICADO",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "SITUACIONAL",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "BOA",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "BOA",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Duelo tático e prático, apenas 2.",
+      "fonte": "https://boardgamegeek.com/boardgame/434906/tag-team",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "splendor-marvel",
+      "nome": "Splendor: Marvel",
+      "jogadores": "2–4",
+      "afinidade": {
+        "familia": "Situacional",
+        "casuais": "Situacional",
+        "estrategicos": "Bom",
+        "casais": "Bom",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Estratégia acessível, menor interação direta.",
+      "fonte": "https://boardgamegeek.com/boardgame/293296/splendor-marvel",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "o-senhor-dos-aneis-duelo-pela-terra-media",
+      "nome": "O Senhor dos Anéis: Duelo pela Terra-média",
+      "jogadores": "2–2",
+      "afinidade": {
+        "familia": "Menos indicado",
+        "casuais": "Situacional",
+        "estrategicos": "Muito forte",
+        "casais": "Muito forte",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "POUCO INDICADO",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "SITUACIONAL",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "PRIORIDADE",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "PRIORIDADE",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Excelente duelo; precisa explicar símbolos e estratégia.",
+      "fonte": "https://boardgamegeek.com/boardgame/421006/the-lord-of-the-rings-duel-for-middle-earth",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "3-capitulos",
+      "nome": "3 Capítulos",
+      "jogadores": "2–6",
+      "afinidade": {
+        "familia": "Bom",
+        "casuais": "Bom",
+        "estrategicos": "Situacional",
+        "casais": "Bom",
+        "churrasco": "Situacional"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "SITUACIONAL",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "BOA",
+          "6": "BOA",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "BOA",
+          "6": "BOA",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "BOA",
+          "5": "BOA",
+          "6": "BOA",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "BOA",
+          "6": "BOA",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "BOA",
+          "5": "BOA",
+          "6": "BOA",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Draft e combinação de cartas em três etapas.",
+      "fonte": "https://boardgamegeek.com/boardgame/423517/3-chapters",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "harmonies",
+      "nome": "Harmonies",
+      "jogadores": "1–4",
+      "afinidade": {
+        "familia": "Bom",
+        "casuais": "Situacional",
+        "estrategicos": "Muito forte",
+        "casais": "Muito forte",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "PRIORIDADE",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "PRIORIDADE",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Quebra-cabeça visual; baixa interação direta.",
+      "fonte": "https://boardgamegeek.com/boardgame/414317/harmonies",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "spicy",
+      "nome": "Spicy",
+      "jogadores": "2–6",
+      "afinidade": {
+        "familia": "Bom",
+        "casuais": "Muito forte",
+        "estrategicos": "Situacional",
+        "casais": "Bom",
+        "churrasco": "Muito forte"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "casuais": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "estrategicos": {
+          "2": "POUCO INDICADO",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "SITUACIONAL",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "casais": {
+          "2": "SITUACIONAL",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "churrasco": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        }
+      },
+      "observacao": "Blefe excelente; 7–8 apenas teste com 5 cartas iniciais.",
+      "fonte": "https://boardgamegeek.com/boardgame/299169/spicy",
+      "variante": {
+        "sete": "EXPERIMENTAL",
+        "oito": "EXPERIMENTAL",
+        "montagem": "Teste anterior: começar com 5 cartas por pessoa.",
+        "ressalva": "Não há evidência de equilíbrio; monitorar ritmo e duração.",
+        "parecer": "Boa candidata a teste, nunca tratar como oficial.",
+        "fonte": "https://boardgamegeek.com/boardgame/299169/spicy"
+      },
+      "ajustes": {}
+    },
+    {
+      "id": "sea-salt-paper",
+      "nome": "Sea Salt & Paper",
+      "jogadores": "2–4",
+      "afinidade": {
+        "familia": "Bom",
+        "casuais": "Bom",
+        "estrategicos": "Bom",
+        "casais": "Muito forte",
+        "churrasco": "Situacional"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "PRIORIDADE",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Coleções rápidas; regras de pontuação precisam de exemplo.",
+      "fonte": "https://boardgamegeek.com/boardgame/367220/sea-salt-and-paper",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "piratas-3a-ed-pets",
+      "nome": "Piratas! (3ª ed.) + Pets",
+      "jogadores": "2–6",
+      "afinidade": {
+        "familia": "Situacional",
+        "casuais": "Muito forte",
+        "estrategicos": "Situacional",
+        "casais": "Bom",
+        "churrasco": "Muito forte"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "BOA",
+          "6": "SITUACIONAL",
+          "7": "—",
+          "8": "VAR. teste"
+        },
+        "casuais": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "—",
+          "8": "VAR. teste"
+        },
+        "estrategicos": {
+          "2": "POUCO INDICADO",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "SITUACIONAL",
+          "7": "—",
+          "8": "VAR. teste"
+        },
+        "casais": {
+          "2": "SITUACIONAL",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "BOA",
+          "6": "BOA",
+          "7": "—",
+          "8": "VAR. teste"
+        },
+        "churrasco": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "—",
+          "8": "VAR. teste"
+        }
+      },
+      "observacao": "Confronto com cartas; 8 em duplas é só proposta caseira.",
+      "fonte": "https://ludopedia.com.br/jogo/piratas-3-edicao",
+      "variante": {
+        "sete": "NÃO DEFINIDO",
+        "oito": "EXPERIMENTAL",
+        "montagem": "8: quatro duplas compartilham recursos. Para 7 não há montagem fechada.",
+        "ressalva": "Não é 8 pessoas individuais; 7 ainda sem variante consistente.",
+        "parecer": "Não indicar como primeira opção.",
+        "fonte": "https://ludopedia.com.br/jogo/piratas-3-edicao"
+      },
+      "ajustes": {}
+    },
+    {
+      "id": "fantasy-realms",
+      "nome": "Fantasy Realms",
+      "jogadores": "2–6",
+      "afinidade": {
+        "familia": "Menos indicado",
+        "casuais": "Menos indicado",
+        "estrategicos": "Bom",
+        "casais": "Situacional",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "BOA",
+          "6": "BOA",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "SITUACIONAL",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Muitas combinações; exige leitura de efeitos.",
+      "fonte": "https://boardgamegeek.com/boardgame/223040/fantasy-realms",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "cascadia",
+      "nome": "Cascadia",
+      "jogadores": "1–4",
+      "afinidade": {
+        "familia": "Bom",
+        "casuais": "Situacional",
+        "estrategicos": "Muito forte",
+        "casais": "Muito forte",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "PRIORIDADE",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "PRIORIDADE",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Leve a médio; baixa interação direta.",
+      "fonte": "https://boardgamegeek.com/boardgame/295947/cascadia",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "captain-flip",
+      "nome": "Captain Flip",
+      "jogadores": "2–5",
+      "afinidade": {
+        "familia": "Muito forte",
+        "casuais": "Bom",
+        "estrategicos": "Situacional",
+        "casais": "Bom",
+        "churrasco": "Situacional"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "PRIORIDADE",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "BOA",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "BOA",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Escolher e colocar peças; explicação curta.",
+      "fonte": "https://boardgamegeek.com/boardgame/393325/captain-flip",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "schotten-totten",
+      "nome": "Schotten Totten",
+      "jogadores": "2–2",
+      "afinidade": {
+        "familia": "Bom",
+        "casuais": "Situacional",
+        "estrategicos": "Muito forte",
+        "casais": "Muito forte",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "BOA",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "SITUACIONAL",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "PRIORIDADE",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "PRIORIDADE",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Duelo de formações e blefe tático.",
+      "fonte": "https://boardgamegeek.com/boardgame/372/schotten-totten",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "ascension-edicao-10-anos",
+      "nome": "Ascension: Edição 10 anos",
+      "jogadores": "1–4",
+      "afinidade": {
+        "familia": "Menos indicado",
+        "casuais": "Situacional",
+        "estrategicos": "Bom",
+        "casais": "Bom",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Deckbuilding acessível, requer aprender mercado/combos.",
+      "fonte": "https://boardgamegeek.com/boardgame/325810/ascension-fourth-edition",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "monopoly-pokemon-2025",
+      "nome": "Monopoly Pokémon (2025)",
+      "jogadores": "2–4",
+      "afinidade": {
+        "familia": "Situacional",
+        "casuais": "Situacional",
+        "estrategicos": "Menos indicado",
+        "casais": "Situacional",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Tema familiar; relativamente longo para churrasco.",
+      "fonte": "https://boardgamegeek.com/boardgame/439091/monopoly-pokemon-edition",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "munchkin",
+      "nome": "Munchkin",
+      "jogadores": "3–6",
+      "afinidade": {
+        "familia": "Menos indicado",
+        "casuais": "Menos indicado",
+        "estrategicos": "Menos indicado",
+        "casais": "Menos indicado",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "—",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "casuais": {
+          "2": "—",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "estrategicos": {
+          "2": "—",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "casais": {
+          "2": "—",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "churrasco": {
+          "2": "—",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        }
+      },
+      "observacao": "Muita negociação; tempo e eliminações podem incomodar.",
+      "fonte": "https://boardgamegeek.com/boardgame/1927/munchkin",
+      "variante": {
+        "sete": "EXPERIMENTAL",
+        "oito": "EXPERIMENTAL",
+        "montagem": "Proposta anterior sem regras detalhadas suficientes.",
+        "ressalva": "Tende a exceder 90 min; não validado com 7–8.",
+        "parecer": "Não recomendar.",
+        "fonte": "https://boardgamegeek.com/boardgame/1927/munchkin"
+      },
+      "ajustes": {}
+    },
+    {
+      "id": "cockroach-poker-royal",
+      "nome": "Cockroach Poker Royal",
+      "jogadores": "2–6",
+      "afinidade": {
+        "familia": "Bom",
+        "casuais": "Muito forte",
+        "estrategicos": "Menos indicado",
+        "casais": "Bom",
+        "churrasco": "Muito forte"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "SITUACIONAL",
+          "3": "BOA",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "casuais": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "estrategicos": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "casais": {
+          "2": "SITUACIONAL",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "PRIORIDADE",
+          "6": "BOA",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        },
+        "churrasco": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "VAR. teste",
+          "8": "VAR. teste"
+        }
+      },
+      "observacao": "Blefe e provocação; 7–8 não são oficiais.",
+      "fonte": "https://boardgamegeek.com/boardgame/129736/cockroach-poker-royal",
+      "variante": {
+        "sete": "EXPERIMENTAL",
+        "oito": "EXPERIMENTAL",
+        "montagem": "Manter regras de passar cartas para além do limite.",
+        "ressalva": "Pode ficar lento e desequilibrado.",
+        "parecer": "Teste opcional; 5–6 mais seguro.",
+        "fonte": "https://boardgamegeek.com/boardgame/129736/cockroach-poker-royal"
+      },
+      "ajustes": {}
+    },
+    {
+      "id": "medievalia",
+      "nome": "Medievalia",
+      "jogadores": "2–6",
+      "afinidade": {
+        "familia": "Menos indicado",
+        "casuais": "Situacional",
+        "estrategicos": "Situacional",
+        "casais": "Situacional",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "SITUACIONAL",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "SITUACIONAL",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "SITUACIONAL",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Cartas e interação; menos evidências sobre grupo ideal.",
+      "fonte": "https://ludopedia.com.br/jogo/medievalia",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "dungeons-drinks",
+      "nome": "Dungeons & Drinks",
+      "jogadores": "2–6",
+      "afinidade": {
+        "familia": "Situacional",
+        "casuais": "Bom",
+        "estrategicos": "Menos indicado",
+        "casais": "Bom",
+        "churrasco": "Bom"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "SITUACIONAL",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "BOA",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "SITUACIONAL",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "BOA",
+          "6": "BOA",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "BOA",
+          "6": "BOA",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Cartas de humor e confrontos; depende da disposição da mesa.",
+      "fonte": "https://boardgamegeek.com/boardgame/313454/dungeons-and-drinks",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "that-s-not-a-hat",
+      "nome": "That's Not a Hat",
+      "jogadores": "3–8",
+      "afinidade": {
+        "familia": "Situacional",
+        "casuais": "Muito forte",
+        "estrategicos": "Menos indicado",
+        "casais": "Muito forte",
+        "churrasco": "Muito forte"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "—",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "SITUACIONAL",
+          "7": "SITUACIONAL",
+          "8": "SITUACIONAL"
+        },
+        "casuais": {
+          "2": "—",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "PRIORIDADE",
+          "8": "PRIORIDADE"
+        },
+        "estrategicos": {
+          "2": "—",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "POUCO INDICADO",
+          "6": "POUCO INDICADO",
+          "7": "POUCO INDICADO",
+          "8": "POUCO INDICADO"
+        },
+        "casais": {
+          "2": "—",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "PRIORIDADE",
+          "8": "PRIORIDADE"
+        },
+        "churrasco": {
+          "2": "—",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "PRIORIDADE",
+          "8": "PRIORIDADE"
+        }
+      },
+      "observacao": "Memória e blefe; pode constranger quem não gosta de esquecer.",
+      "fonte": "https://boardgamegeek.com/boardgame/375651/thats-not-a-hat",
+      "variante": {
+        "sete": "OFICIAL",
+        "oito": "OFICIAL",
+        "montagem": "Regras normais.",
+        "ressalva": "Exige memória; participantes podem não gostar da pressão.",
+        "parecer": "Recomendado em grupo descontraído.",
+        "fonte": "https://boardgamegeek.com/boardgame/375651/thats-not-a-hat"
+      },
+      "ajustes": {}
+    },
+    {
+      "id": "war-game-of-thrones",
+      "nome": "War: Game of Thrones",
+      "jogadores": "2–4",
+      "afinidade": {
+        "familia": "Menos indicado",
+        "casuais": "Menos indicado",
+        "estrategicos": "Situacional",
+        "casais": "Menos indicado",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "POUCO INDICADO",
+          "4": "POUCO INDICADO",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Confronto territorial, mas duração e regras pesam.",
+      "fonte": "https://ludopedia.com.br/jogo/war-game-of-thrones",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "o-senhor-dos-aneis-o-confronto",
+      "nome": "O Senhor dos Anéis: O Confronto",
+      "jogadores": "2–2",
+      "afinidade": {
+        "familia": "Menos indicado",
+        "casuais": "Situacional",
+        "estrategicos": "Muito forte",
+        "casais": "Bom",
+        "churrasco": "Menos indicado"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "POUCO INDICADO",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casuais": {
+          "2": "SITUACIONAL",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "estrategicos": {
+          "2": "PRIORIDADE",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "casais": {
+          "2": "BOA",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "—",
+          "4": "—",
+          "5": "—",
+          "6": "—",
+          "7": "—",
+          "8": "—"
+        }
+      },
+      "observacao": "Duelo assimétrico e estratégico, apenas 2.",
+      "fonte": "https://boardgamegeek.com/boardgame/18833/the-lord-of-the-rings-the-confrontation",
+      "variante": null,
+      "ajustes": {}
+    },
+    {
+      "id": "geeks-vs-trolls-caos-em-8",
+      "nome": "Geeks Vs Trolls + Caos em 8",
+      "jogadores": "1–6",
+      "afinidade": {
+        "familia": "Situacional",
+        "casuais": "Muito forte",
+        "estrategicos": "Situacional",
+        "casais": "Bom",
+        "churrasco": "Muito forte"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "POUCO INDICADO",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "SITUACIONAL",
+          "7": "SITUACIONAL",
+          "8": "SITUACIONAL"
+        },
+        "casuais": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "PRIORIDADE",
+          "8": "PRIORIDADE"
+        },
+        "estrategicos": {
+          "2": "POUCO INDICADO",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "SITUACIONAL",
+          "7": "SITUACIONAL",
+          "8": "SITUACIONAL"
+        },
+        "casais": {
+          "2": "SITUACIONAL",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "BOA",
+          "8": "BOA"
+        },
+        "churrasco": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "PRIORIDADE",
+          "8": "PRIORIDADE"
+        }
+      },
+      "observacao": "Usar Caos em 8 nas mesas de 7/8; pode haver eliminação.",
+      "fonte": "https://ludopedia.com.br/jogo/geeks-vs-trolls",
+      "variante": {
+        "sete": "OFICIAL + EXP.",
+        "oito": "OFICIAL + EXP.",
+        "montagem": "Usar a expansão; modo Duelo de Clãs também disponível.",
+        "ressalva": "Eliminação pode deixar gente esperando.",
+        "parecer": "Recomendado quando querem confrontos.",
+        "fonte": "https://www.catarse.com.br/geeksvstrolls/updates"
+      },
+      "ajustes": {
+        "7": "Requer a expansão Caos em 8.",
+        "8": "Requer a expansão Caos em 8."
+      }
+    },
+    {
+      "id": "codenames-imagens",
+      "nome": "Codenames: Imagens",
+      "jogadores": "4–8+ (equipes); 2–3 modos especiais",
+      "afinidade": {
+        "familia": "Bom",
+        "casuais": "Muito forte",
+        "estrategicos": "Bom",
+        "casais": "Muito forte",
+        "churrasco": "Muito forte"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "BOA",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "PRIORIDADE",
+          "8": "PRIORIDADE"
+        },
+        "casuais": {
+          "2": "SITUACIONAL",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "PRIORIDADE",
+          "8": "PRIORIDADE"
+        },
+        "estrategicos": {
+          "2": "POUCO INDICADO",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "BOA",
+          "6": "BOA",
+          "7": "BOA",
+          "8": "BOA"
+        },
+        "casais": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "BOA",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "PRIORIDADE",
+          "8": "PRIORIDADE"
+        },
+        "churrasco": {
+          "2": "SITUACIONAL",
+          "3": "SITUACIONAL",
+          "4": "BOA",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "PRIORIDADE",
+          "8": "PRIORIDADE"
+        }
+      },
+      "observacao": "Equipes oficialmente em 4–8+; modos 2 coop e 3 assimétrico.",
+      "fonte": "https://boardgamegeek.com/boardgame/198773/codenames-pictures",
+      "variante": {
+        "sete": "OFICIAL (EQUIPES)",
+        "oito": "OFICIAL (EQUIPES)",
+        "montagem": "2 equipes: 7 = 4x3; 8 = 4x4.",
+        "ressalva": "Com 7, equipes de tamanhos diferentes.",
+        "parecer": "Excelente para grupos grandes.",
+        "fonte": "https://www.czechgames.com/games/codenames-pictures"
+      },
+      "ajustes": {
+        "7": "Duas equipes, normalmente com 4 contra 3.",
+        "8": "Duas equipes com 4 pessoas em cada."
+      }
+    },
+    {
+      "id": "skull-king",
+      "nome": "Skull King",
+      "jogadores": "2–8 (edição atual)",
+      "afinidade": {
+        "familia": "Muito forte",
+        "casuais": "Bom",
+        "estrategicos": "Bom",
+        "casais": "Muito forte",
+        "churrasco": "Situacional"
+      },
+      "classificacao": {
+        "familia": {
+          "2": "BOA",
+          "3": "PRIORIDADE",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "PRIORIDADE",
+          "8": "PRIORIDADE"
+        },
+        "casuais": {
+          "2": "SITUACIONAL",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "BOA",
+          "6": "BOA",
+          "7": "BOA",
+          "8": "BOA"
+        },
+        "estrategicos": {
+          "2": "SITUACIONAL",
+          "3": "BOA",
+          "4": "BOA",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "BOA",
+          "8": "BOA"
+        },
+        "casais": {
+          "2": "BOA",
+          "3": "BOA",
+          "4": "PRIORIDADE",
+          "5": "PRIORIDADE",
+          "6": "PRIORIDADE",
+          "7": "BOA",
+          "8": "BOA"
+        },
+        "churrasco": {
+          "2": "POUCO INDICADO",
+          "3": "SITUACIONAL",
+          "4": "SITUACIONAL",
+          "5": "SITUACIONAL",
+          "6": "SITUACIONAL",
+          "7": "SITUACIONAL",
+          "8": "SITUACIONAL"
+        }
+      },
+      "observacao": "Na família usar 1/3/5/7/9 + pontuação clássica sem bônus; com 8, 1/3/5/7/7.",
+      "fonte": "https://boardgamegeek.com/boardgame/150145/skull-king",
+      "variante": {
+        "sete": "OFICIAL",
+        "oito": "OFICIAL",
+        "montagem": "Versão familiar: 1,3,5,7,9 com 7; 1,3,5,7,7 com 8.",
+        "ressalva": "Confirmar 65 cartas na nossa seleção; sem bônus.",
+        "parecer": "Melhor com a mesa conhecendo vazas.",
+        "fonte": "https://www.grandpabecksgames.com/pages/skull-king"
+      },
+      "ajustes": {
+        "7": "Nossa versão familiar usa 1, 3, 5, 7 e 9 cartas.",
+        "8": "Nossa versão familiar usa 1, 3, 5, 7 e 7 cartas. Baralho de 65 cartas."
+      }
+    }
+  ],
+  "escolhasRapidas": {
+    "familia": {
+      "2": [
+        "Captain Flip",
+        "Cascadia",
+        "Harmonies",
+        "Skull King"
+      ],
+      "3": [
+        "Captain Flip",
+        "Skull King",
+        "Spicy",
+        "Seas of Strife"
+      ],
+      "4": [
+        "Skull King",
+        "Captain Flip",
+        "Spicy",
+        "Seas of Strife"
+      ],
+      "5": [
+        "Skull King",
+        "Seas of Strife",
+        "Captain Flip",
+        "Cockroach Poker Royal"
+      ],
+      "6": [
+        "Skull King",
+        "Seas of Strife",
+        "Codenames: Imagens",
+        "Cockroach Poker Royal"
+      ],
+      "7": [
+        "Skull King",
+        "Codenames: Imagens",
+        "That's Not a Hat",
+        "Geeks Vs Trolls + Caos em 8"
+      ],
+      "8": [
+        "Codenames: Imagens",
+        "Skull King",
+        "That's Not a Hat",
+        "Geeks Vs Trolls + Caos em 8"
+      ]
+    },
+    "casuais": {
+      "2": [
+        "Toy Battle",
+        "Spicy",
+        "Geeks Vs Trolls + Caos em 8",
+        "Dungeons & Drinks"
+      ],
+      "3": [
+        "Spicy",
+        "Survive: The Island",
+        "Magical Athlete (2025)",
+        "Geeks Vs Trolls + Caos em 8"
+      ],
+      "4": [
+        "Survive: The Island",
+        "Spicy",
+        "Magical Athlete (2025)",
+        "Geeks Vs Trolls + Caos em 8"
+      ],
+      "5": [
+        "Magical Athlete (2025)",
+        "Spicy",
+        "Survive: The Island",
+        "Cockroach Poker Royal"
+      ],
+      "6": [
+        "Magical Athlete (2025)",
+        "Geeks Vs Trolls + Caos em 8",
+        "Spicy",
+        "Cockroach Poker Royal"
+      ],
+      "7": [
+        "Geeks Vs Trolls + Caos em 8",
+        "Codenames: Imagens",
+        "That's Not a Hat",
+        "Skull King"
+      ],
+      "8": [
+        "Codenames: Imagens",
+        "Geeks Vs Trolls + Caos em 8",
+        "That's Not a Hat",
+        "Skull King"
+      ]
+    },
+    "estrategicos": {
+      "2": [
+        "The King Is Dead: Segunda Edição",
+        "O Senhor dos Anéis: Duelo pela Terra-média",
+        "Tiranos da Umbreterna (2021)",
+        "O Senhor dos Anéis: O Confronto"
+      ],
+      "3": [
+        "Tiranos da Umbreterna (2021)",
+        "The King Is Dead: Segunda Edição",
+        "Cyclades: Legendary Edition",
+        "Ethnos: Second Edition"
+      ],
+      "4": [
+        "Tiranos da Umbreterna (2021)",
+        "Cyclades: Legendary Edition",
+        "Ethnos: Second Edition",
+        "The King Is Dead: Segunda Edição"
+      ],
+      "5": [
+        "Cyclades: Legendary Edition",
+        "Ethnos: Second Edition",
+        "Small World of Warcraft",
+        "Skull King"
+      ],
+      "6": [
+        "Ethnos: Second Edition",
+        "Cyclades: Legendary Edition",
+        "Skull King",
+        "Fantasy Realms"
+      ],
+      "7": [
+        "Skull King",
+        "Codenames: Imagens",
+        "Geeks Vs Trolls + Caos em 8",
+        "Small World of Warcraft"
+      ],
+      "8": [
+        "Codenames: Imagens",
+        "Skull King",
+        "Geeks Vs Trolls + Caos em 8",
+        "Small World of Warcraft"
+      ]
+    },
+    "casais": {
+      "2": [
+        "O Senhor dos Anéis: Duelo pela Terra-média",
+        "Agent Avenue",
+        "Harmonies",
+        "Cascadia"
+      ],
+      "3": [
+        "Harmonies",
+        "Cascadia",
+        "Ethnos: Second Edition",
+        "Magical Athlete (2025)"
+      ],
+      "4": [
+        "Magical Athlete (2025)",
+        "Ethnos: Second Edition",
+        "Agent Avenue",
+        "Cascadia"
+      ],
+      "5": [
+        "Magical Athlete (2025)",
+        "King of Tokyo: Monster Box",
+        "Ethnos: Second Edition",
+        "Codenames: Imagens"
+      ],
+      "6": [
+        "Magical Athlete (2025)",
+        "Codenames: Imagens",
+        "Skull King",
+        "Ethnos: Second Edition"
+      ],
+      "7": [
+        "Codenames: Imagens",
+        "That's Not a Hat",
+        "Geeks Vs Trolls + Caos em 8",
+        "Skull King"
+      ],
+      "8": [
+        "Codenames: Imagens",
+        "That's Not a Hat",
+        "Geeks Vs Trolls + Caos em 8",
+        "Skull King"
+      ]
+    },
+    "churrasco": {
+      "2": [
+        "Spicy",
+        "Dungeons & Drinks",
+        "Magical Athlete (2025)",
+        "Piratas! (3ª ed.) + Pets"
+      ],
+      "3": [
+        "Spicy",
+        "That's Not a Hat",
+        "Cockroach Poker Royal",
+        "Magical Athlete (2025)"
+      ],
+      "4": [
+        "Spicy",
+        "Magical Athlete (2025)",
+        "That's Not a Hat",
+        "Cockroach Poker Royal"
+      ],
+      "5": [
+        "Magical Athlete (2025)",
+        "Spicy",
+        "Cockroach Poker Royal",
+        "That's Not a Hat"
+      ],
+      "6": [
+        "Magical Athlete (2025)",
+        "Spicy",
+        "That's Not a Hat",
+        "Cockroach Poker Royal"
+      ],
+      "7": [
+        "That's Not a Hat",
+        "Geeks Vs Trolls + Caos em 8",
+        "Codenames: Imagens",
+        "Skull King"
+      ],
+      "8": [
+        "That's Not a Hat",
+        "Geeks Vs Trolls + Caos em 8",
+        "Codenames: Imagens",
+        "Skull King"
+      ]
+    }
+  },
+  "regrasDaCasa": {
+    "titulo": "Skull King Familiar",
+    "regras": [
+      {
+        "regra": "Rodadas com 2–7 pessoas",
+        "padrao": "1, 3, 5, 7, 9 cartas",
+        "nota": "Cinco rodadas; recolher e embaralhar TODAS as cartas a cada rodada."
+      },
+      {
+        "regra": "Rodadas com 8 pessoas",
+        "padrao": "1, 3, 5, 7, 7 cartas",
+        "nota": "O baralho simplificado de 65 cartas não comporta 8 × 9."
+      },
+      {
+        "regra": "Naipes numerados",
+        "padrao": "Verde / amarelo / roxo / preto",
+        "nota": "Preto é trunfo; deve seguir o naipe quando jogar carta numerada."
+      },
+      {
+        "regra": "Cartas especiais",
+        "padrao": "Fuga, Pirata, Sereia e Skull King",
+        "nota": "Podem ser jogadas mesmo com carta do naipe na mão."
+      },
+      {
+        "regra": "Carta excluída",
+        "padrao": "Tigresa / Scary Mary",
+        "nota": "Fora por exigir escolha de efeito."
+      },
+      {
+        "regra": "Extras excluídos",
+        "padrao": "Bônus, poderes avançados, Kraken, Baleia, Saque",
+        "nota": "Somente baralho simplificado e cartas acima."
+      },
+      {
+        "regra": "Acertou aposta ≥1",
+        "padrao": "20 pontos por vaza apostada",
+        "nota": "Exemplo: apostou 3 e acertou = +60."
+      },
+      {
+        "regra": "Errou aposta ≥1",
+        "padrao": "−10 pontos por vaza de diferença",
+        "nota": "Exemplo: apostou 3, fez 2 = −10."
+      },
+      {
+        "regra": "Apostou zero e acertou",
+        "padrao": "10 pontos por carta da rodada",
+        "nota": "Exemplo: 5 cartas = +50."
+      },
+      {
+        "regra": "Apostou zero e errou",
+        "padrao": "−10 pontos por carta da rodada",
+        "nota": "Exemplo: 5 cartas = −50."
+      },
+      {
+        "regra": "Facilitador",
+        "padrao": "Uma pessoa anota apostas e pontos",
+        "nota": "Manter carta de referência da hierarquia na mesa."
+      },
+      {
+        "regra": "Status",
+        "padrao": "REGRA OFICIAL DA NOSSA MESA",
+        "nota": "Variante familiar definida em 06/11/2026, não regra publicada integral da editora."
+      }
+    ]
+  },
+  "historico": {
+    "atualizadoEm": "2026-11-06",
+    "removidos": [
+      "Jaipur",
+      "Claim",
+      "Claim 2",
+      "Flip 7",
+      "Rebel Princess",
+      "Trio"
+    ],
+    "observacao": "Claim: Edição Limitada permanece; suas duas entradas duplicadas foram retiradas."
+  }
+}

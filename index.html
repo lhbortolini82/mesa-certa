@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b101a" />
+  <meta name="description" content="Encontre o melhor jogo da sua coleção para cada grupo e quantidade de jogadores." />
+  <title>Mesa Certa — Minha coleção de jogos</title>
+  <style>
+    :root { color-scheme: dark; --bg:#0b101a; --panel:#151d2c; --panel2:#1b2535; --panel3:#222e40; --line:#314053; --text:#f2f4f3; --muted:#a4b0c1; --dim:#768497; --accent:#c9f17d; --accent2:#a7a2ff; --radius:18px; --shadow:0 20px 60px rgba(0,0,0,.20) }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(ellipse 750px 500px at 90% -10%,rgba(113,107,218,.17),transparent 70%),radial-gradient(ellipse 650px 480px at -10% 25%,rgba(71,121,108,.12),transparent 70%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:15px;line-height:1.5;min-height:100vh}
+    button,a{font:inherit}
+    button{cursor:pointer}
+    a{color:inherit}
+    :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+    ::selection{background:var(--accent);color:var(--bg)}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+    .site-head{border-bottom:1px solid rgba(165,180,204,.11);background:rgba(8,14,24,.53);backdrop-filter:blur(12px)}
+    .head-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+    .brand-mark{width:44px;height:44px;border-radius:13px;background:var(--accent);color:#142112;display:grid;place-items:center;font-size:24px;flex:none;box-shadow:0 6px 20px rgba(201,241,125,.18)}
+    .brand-name{font-weight:850;font-size:19px;letter-spacing:-.7px;line-height:1.13}
+    .brand-sub{font-size:11px;color:var(--muted);font-weight:500;letter-spacing:.02em;display:block;margin-top:3px}
+    .head-chip{color:#becadd;background:#182231;border:1px solid #344052;border-radius:100px;padding:7px 12px;white-space:nowrap;font-size:12px;font-weight:650}
+    .hero{padding-top:54px;padding-bottom:34px}
+    .eyebrow{color:var(--accent);font-weight:800;font-size:11px;letter-spacing:.19em;text-transform:uppercase;display:flex;align-items:center;gap:9px}
+    .eyebrow:before{content:"";width:17px;height:2px;border-radius:5px;background:var(--accent)}
+    h1,h2,h3,p{margin-top:0}
+    h1{margin:15px 0 14px;font-size:clamp(35px,5.2vw,61px);letter-spacing:-2.65px;line-height:1.06;font-weight:850;max-width:910px}
+    h1 .soft{color:var(--accent)}
+    .intro{font-size:16px;line-height:1.6;color:var(--muted);max-width:650px;margin:0}
+    .control-panel{margin-top:32px;padding:27px;background:linear-gradient(145deg,rgba(31,42,60,.93),rgba(18,26,39,.95));border:1px solid #3a4759;border-radius:24px;box-shadow:var(--shadow)}
+    .section-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:13px}
+    .section-title{font-weight:780;font-size:14px;letter-spacing:.01em;margin:0}
+    .section-meta{font-size:12px;color:var(--dim)}
+    .profile-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+    .profile-btn{min-height:105px;text-align:left;color:var(--muted);background:#131c2b;border:1px solid #354354;border-radius:14px;padding:13px;transition:.17s ease;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+    .profile-btn:hover{background:#202c3e;border-color:#66758a;transform:translateY(-1px)}
+    .profile-btn.active{background:linear-gradient(145deg,#324839,#253a37);border-color:var(--accent);color:var(--text);box-shadow:inset 0 0 0 1px rgba(201,241,125,.15)}
+    .profile-icon{font-size:22px;line-height:1.1}
+    .profile-label{font-size:12px;font-weight:730;line-height:1.25}
+    .profile-desc{margin-top:13px;font-size:13px;color:var(--muted);min-height:18px}
+    .divider{border:0;border-top:1px solid rgba(183,199,218,.16);margin:24px 0}
+    .control-bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+    .people-buttons{display:flex;flex-wrap:wrap;gap:8px}
+    .number-btn{height:43px;width:49px;border-radius:11px;background:#111b29;border:1px solid #354457;color:#dce4ea;font-size:15px;font-weight:800;transition:.17s}
+    .number-btn:hover{border-color:#8d9eae;transform:translateY(-1px)}
+    .number-btn.active{background:var(--accent);border-color:var(--accent);color:#1a241b;box-shadow:0 6px 20px rgba(201,241,125,.15)}
+    .variant-choice{display:flex;align-items:center;gap:10px;background:#121c2a;border:1px solid #344254;border-radius:13px;padding:10px 13px;min-height:56px;max-width:355px}
+    .toggle{position:relative;width:41px;height:24px;flex:none}
+    .toggle input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;margin:0}
+    .toggle-track{pointer-events:none;display:block;width:41px;height:24px;border-radius:20px;background:#546173;transition:.2s}
+    .toggle-track:after{content:"";width:18px;height:18px;border-radius:50%;background:white;position:absolute;top:3px;left:3px;transition:.2s}
+    .toggle input:checked+.toggle-track{background:var(--accent)}
+    .toggle input:checked+.toggle-track:after{left:20px;background:#1d2d18}
+    .variant-text strong{display:block;font-size:12px;font-weight:730;line-height:1.3}
+    .variant-text small{color:var(--dim);display:block;font-size:10px;line-height:1.45;margin-top:2px}
+    .results{padding:27px 0 65px}
+    .result-head{display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap;margin-bottom:19px}
+    .result-eyebrow{font-size:11px;font-weight:800;letter-spacing:.15em;color:var(--accent2);text-transform:uppercase;margin-bottom:7px}
+    h2{font-size:clamp(25px,3.3vw,34px);letter-spacing:-1.2px;line-height:1.18;margin:0 0 7px;font-weight:830}
+    .result-sub{color:var(--muted);font-size:13px;margin:0;max-width:660px}
+    .actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+    .action-btn{background:#202c3d;color:#e5edee;border:1px solid #415066;border-radius:11px;padding:10px 13px;display:flex;align-items:center;gap:8px;white-space:nowrap;font-size:12px;font-weight:760;min-height:42px}
+    .action-btn:hover{background:#2a394e;border-color:#8292a8}
+    .action-btn svg{height:16px;width:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+    .callout{margin:0 0 18px;background:rgba(168,160,254,.07);border:1px solid rgba(168,160,254,.20);border-radius:12px;padding:12px 14px;font-size:12px;color:#c6cade}
+    .callout strong{color:#e3e0ff}
+    .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch}
+    .game-card{display:flex;gap:16px;min-height:194px;padding:20px;background:linear-gradient(135deg,#1c2738,#151e2d 78%);border:1px solid #344357;border-radius:18px;position:relative;overflow:hidden;transition:.18s}
+    .game-card:hover{border-color:#748398;background:#212c3e;transform:translateY(-2px)}
+    .game-card.featured{grid-column:span 2;padding:28px;gap:26px;min-height:240px;background:radial-gradient(ellipse 400px 250px at 0 10%,rgba(197,241,125,.08),transparent 90%),linear-gradient(125deg,#253346 0%,#192436 76%);border-color:#758c66}
+    .game-visual{background:linear-gradient(155deg,hsl(var(--hue) 36% 35% / .8),hsl(var(--hue) 22% 17% / .5));border:1px solid hsl(var(--hue) 45% 55% / .35);flex:none;width:91px;min-height:143px;border-radius:12px;display:flex;flex-direction:column;justify-content:space-between;padding:10px 12px;position:relative;isolation:isolate;overflow:hidden}
+    .game-visual:before{content:"";position:absolute;width:108px;height:108px;border:1px solid rgba(255,255,255,.12);border-radius:25px;transform:rotate(25deg);right:-57px;top:27px;z-index:-1;box-shadow:0 0 0 17px rgba(255,255,255,.035),0 0 0 38px rgba(255,255,255,.02)}
+    .game-visual .rank{color:rgba(255,255,255,.75);font-size:11px;letter-spacing:.1em;font-weight:800}
+    .game-visual .symbol{font-size:28px;line-height:1;color:rgba(255,255,255,.93);font-weight:850;letter-spacing:-1.5px;word-break:break-word}
+    .game-card.featured .game-visual{width:150px;min-height:178px;padding:15px 18px}
+    .game-card.featured .game-visual .symbol{font-size:45px}
+    .game-card.featured .game-visual .rank{font-size:14px}
+    .game-content{min-width:0;flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+    .tags{display:flex;gap:6px;flex-wrap:wrap}
+    .tag{border-radius:6px;font-size:10px;font-weight:800;letter-spacing:.025em;line-height:1.5;padding:4px 7px;color:#d8e3ef;background:#2b394b;border:1px solid #3b4d61}
+    .tag.ideal{background:rgba(201,241,125,.11);border-color:rgba(201,241,125,.36);color:#d6f5a7}
+    .tag.variant{background:rgba(244,181,96,.1);border-color:rgba(244,181,96,.30);color:#ffca93}
+    .tag.expan{background:rgba(171,154,255,.1);border-color:rgba(171,154,255,.30);color:#ded2ff}
+    .game-title{font-size:19px;font-weight:820;line-height:1.22;letter-spacing:-.38px;margin:0;overflow-wrap:anywhere}
+    .game-card.featured .game-title{font-size:26px;letter-spacing:-.7px}
+    .game-meta{color:#9dadbd;font-size:11px;font-weight:650}
+    .game-description{color:#bfccd8;font-size:12.5px;line-height:1.5;margin:3px 0 0}
+    .game-card.featured .game-description{font-size:14px;max-width:680px}
+    .details{width:100%;margin-top:auto;padding-top:9px}
+    .details summary{color:var(--accent);font-weight:800;cursor:pointer;user-select:none;display:inline-flex;gap:5px;align-items:center;font-size:11px}
+    .details summary::marker{content:''}
+    .details summary:after{content:'＋';font-size:15px;margin-left:4px}
+    .details[open] summary:after{content:'−'}
+    .detail-body{border-top:1px solid #394758;margin-top:12px;padding-top:12px;color:#bac7d3;font-size:12px;line-height:1.58}
+    .detail-body p{margin:0 0 9px}
+    .detail-body strong{color:#ecf4f0}
+    .detail-body a{color:#d1f4a2;text-underline-offset:3px}
+    .detail-body p:last-child{margin-bottom:0}
+    .no-results{border:1px solid #354254;background:#172233;padding:24px;border-radius:14px;text-align:center;color:var(--muted)}
+    .helper{margin-top:22px;display:flex;gap:9px;align-items:flex-start;color:#8ea0b2;font-size:12px}
+    .helper svg{flex:none;width:17px;height:17px;stroke:#a4b4c6;fill:none;stroke-width:1.7;margin-top:1px}
+    .extras{padding:0 0 60px}
+    .extras details{background:#141e2c;border:1px solid #334154;border-radius:14px;padding:18px 21px}
+    .extras summary{cursor:pointer;font-weight:800;font-size:14px}
+    .extras p{font-size:12.5px;color:var(--muted);margin:12px 0 8px}
+    .extras code{font-size:11px;background:#28354a;border-radius:4px;padding:2px 5px;overflow-wrap:anywhere}
+    .rules-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:13px}
+    .rules-table th,.rules-table td{text-align:left;vertical-align:top;padding:9px 8px;border-bottom:1px solid #344154}
+    .rules-table th{color:#d3e5ba;font-size:11px}
+    .rules-table td{color:#bfccda}
+    .footer{padding:23px 0 35px;border-top:1px solid rgba(165,180,204,.12);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#8091a6;font-size:11px}
+    .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(35px);opacity:0;pointer-events:none;background:var(--accent);color:#1a2b16;font-weight:800;font-size:13px;padding:13px 18px;border-radius:10px;box-shadow:0 10px 35px #0007;transition:.2s;z-index:9;max-width:90%;text-align:center}
+    .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+    @media(min-width:1050px){.game-card:nth-child(2),.game-card:nth-child(3){min-height:214px}}
+    @media(max-width:760px){.wrap{padding:0 17px}.head-inner{height:68px}.brand-mark{width:39px;height:39px}.brand-name{font-size:17px}.head-chip{font-size:10px;padding:6px 9px}.hero{padding-top:37px}.intro{font-size:14px}.control-panel{padding:18px;border-radius:19px}.profile-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.profile-btn{min-height:89px;padding:11px}.profile-label{font-size:11px}.profile-icon{font-size:19px}.control-bottom{align-items:stretch}.number-btn{flex:1;min-width:43px}.people-buttons{flex-wrap:nowrap;gap:5px}.variant-choice{max-width:none}.result-grid{grid-template-columns:1fr}.game-card.featured{grid-column:span 1}.game-card{padding:15px;gap:14px;min-height:170px}.game-card.featured{padding:20px;gap:15px;min-height:190px}.game-card.featured .game-visual{width:98px;min-height:150px;padding:12px}.game-card.featured .game-visual .symbol{font-size:34px}.game-title{font-size:17px}.game-card.featured .game-title{font-size:20px}.game-card.featured .game-description{font-size:12.5px}.result-head{align-items:flex-start}.result-head .actions{width:100%}.action-btn{flex:1;justify-content:center}.result-head{gap:12px}.results{padding-top:23px;padding-bottom:38px}.rules-table th:nth-child(3),.rules-table td:nth-child(3){display:none}}
+    @media(max-width:410px){.profile-row{grid-template-columns:repeat(2,minmax(0,1fr))}.people-buttons{flex-wrap:wrap}.number-btn{min-width:43px}.game-visual{width:66px;min-height:118px}.game-card.featured .game-visual{width:77px;min-height:140px}.game-content{gap:5px}.tags{gap:4px}.tag{font-size:9px;padding:3px 5px}.game-title{font-size:16px}.game-card.featured .game-title{font-size:18px}.game-description{font-size:12px}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+    /* Personal ratings: game/profile/optional player count */
+    .ratings{padding:0 0 56px;scroll-margin-top:18px}
+    .rating-shell{border-radius:24px;border:1px solid #3a4759;background:linear-gradient(142deg,#1a2635,#121d2b);padding:27px;box-shadow:var(--shadow)}
+    .rating-header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:23px}
+    .rating-header h2{margin-bottom:7px}
+    .rating-count{border:1px solid #42614b;color:#c9f17d;background:#20372c;padding:8px 12px;border-radius:100px;font-size:11px;font-weight:750;white-space:nowrap}
+    .rating-editor{border:1px solid #3a485d;border-radius:17px;background:#121b29;padding:21px}
+    .rating-editor-head{display:flex;justify-content:space-between;align-items:baseline;gap:13px;flex-wrap:wrap;margin-bottom:16px}
+    .rating-editor-head strong,.rating-settings strong,.rating-backup strong,.rating-history-title strong{font-size:14px}
+    .rating-editor-head small{color:var(--muted);font-size:11px}
+    .rating-picker-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+    .rating-picker-grid .full{grid-column:1/-1}
+    .rating-field{display:flex;flex-direction:column;gap:6px;color:#cdd9e4;font-weight:710;font-size:12px;min-width:0}
+    .rating-field select,.rating-field textarea{width:100%;min-width:0;outline-offset:2px;border-radius:10px;background:#202e40;color:#f4f7f5;border:1px solid #41566e;padding:10px 12px;font:inherit;font-size:12px;line-height:1.4}
+    .rating-field select{min-height:43px;cursor:pointer}
+    .rating-field textarea{resize:vertical;min-height:75px}
+    .rating-field select:focus,.rating-field textarea:focus{border-color:var(--accent)}
+    .context-hint{color:var(--muted);font-size:11px;margin:11px 0 17px;line-height:1.5}
+    .rating-criteria{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .criterion{background:#1b293a;border:1px solid #35465b;padding:12px;border-radius:12px;display:flex;flex-direction:column;gap:8px}
+    .criterion strong{font-size:12px;color:#e5ebf2}
+    .criterion p{margin:0;font-size:11px;color:var(--muted);line-height:1.45;min-height:30px}
+    .criterion select{margin-top:auto}
+    .rating-note{margin-top:16px}
+    .rating-controls{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:16px}
+    .save-rating,.secondary-rating{border-radius:10px;min-height:42px;padding:10px 16px;font-size:12px;font-weight:800}
+    .save-rating{background:var(--accent);border:1px solid var(--accent);color:#1b2b17}
+    .save-rating:hover{filter:brightness(1.06)}
+    .secondary-rating{background:transparent;border:1px solid #516075;color:#c7d4e4}
+    .secondary-rating:hover{background:#243449}
+    .saved-label{color:#b0bdce;font-size:11px}
+    .rating-settings{display:flex;align-items:center;justify-content:space-between;gap:26px;border-top:1px solid #35455b;margin-top:21px;padding-top:23px}
+    .weight-copy{max-width:610px}
+    .weight-copy p,.rating-backup p{font-size:12px;color:var(--muted);margin:6px 0 0;line-height:1.6}
+    .weight-slider{width:min(100%,325px);flex:none}
+    .weight-slider label{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#b9c6d5}
+    .weight-slider output{font-size:21px;color:var(--accent);font-weight:850}
+    .weight-slider input{width:100%;margin:9px 0;accent-color:var(--accent);cursor:pointer}
+    .weight-ends{display:flex;justify-content:space-between;font-size:10px;color:var(--dim)}
+    .rating-backup{border-top:1px solid #35455b;margin-top:23px;padding-top:22px;display:flex;align-items:center;justify-content:space-between;gap:17px;flex-wrap:wrap}
+    .rating-backup>div:first-child{max-width:630px}
+    .backup-buttons{display:flex;gap:9px;flex-wrap:wrap}
+    .rating-history-title{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:25px 0 11px}
+    .rating-history-title span{font-size:11px;color:var(--dim)}
+    .rating-history{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+    .history-item{background:#202d3e;border:1px solid #3b4e63;border-radius:11px;padding:10px 12px;text-align:left;color:#e3eaf3;display:flex;gap:12px;align-items:center;justify-content:space-between}
+    .history-item:hover{border-color:#a3b87e;background:#29384a}
+    .history-item span{font-size:12px;font-weight:730;line-height:1.3}
+    .history-item small{display:block;color:#9eafc3;font-weight:500;font-size:10px;margin-top:3px}
+    .history-item b{white-space:nowrap;color:var(--accent);font-size:12px}
+    .history-empty{color:var(--muted);font-size:12px;grid-column:1/-1;border:1px dashed #4e5b6d;padding:15px;border-radius:11px}
+    .rate-link{padding:6px 9px;color:var(--accent);border:1px solid rgba(201,241,125,.35);background:rgba(201,241,125,.07);border-radius:9px;font-size:11px;font-weight:800;margin-top:7px}
+    .rate-link:hover{background:rgba(201,241,125,.17)}
+    .tag.personal{background:rgba(236,202,116,.11);border-color:rgba(236,202,116,.4);color:#f4dca8}
+    .rating-explanation{font-size:11px;color:var(--muted);margin-top:7px}
+    @media(max-width:760px){.ratings{padding-bottom:38px}.rating-shell{padding:17px;border-radius:18px}.rating-editor{padding:14px}.rating-settings{flex-wrap:wrap;gap:14px}.weight-slider{width:100%}.rating-backup{align-items:stretch}.rating-header{margin-bottom:17px}.rating-history{grid-template-columns:1fr}.rating-criteria{gap:9px}}
+    @media(max-width:450px){.rating-picker-grid,.rating-criteria{grid-template-columns:1fr}.criterion p{min-height:0}.rating-controls button{flex:1}.backup-buttons{width:100%}.backup-buttons button{flex:1;justify-content:center}}
+
+    /* Explorar por jogo — visão inversa do ranking */
+    [hidden]{display:none!important}
+    .view-tabs{margin:27px 0 0;display:inline-flex;align-items:center;gap:5px;padding:5px;border-radius:14px;border:1px solid #455267;background:#172337;max-width:100%}
+    .view-tab{border:0;background:transparent;color:#bac8da;border-radius:10px;padding:12px 18px;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:9px;min-height:44px;transition:.17s;white-space:nowrap}
+    .view-tab:hover{background:#2a3850;color:#fff}
+    .view-tab.active{background:var(--accent);color:#1a2719;box-shadow:0 4px 15px #0005}
+    .title-button{border:0;background:transparent;padding:0;color:inherit;font-weight:inherit;font-size:inherit;letter-spacing:inherit;text-align:left;line-height:inherit}
+    .title-button:hover{text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--accent)}
+    .card-links{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:7px}
+    .card-links .rate-link{margin-top:0}
+    .viewgame-link{padding:6px 9px;border-radius:9px;border:1px solid #64718a;color:#d7e7ff;background:rgba(113,141,171,.10);font-size:11px;font-weight:800}
+    .viewgame-link:hover{background:#32465a;border-color:var(--accent)}
+    .game-view{padding:20px 0 60px;scroll-margin-top:10px}
+    .game-browser{padding:26px;border-radius:24px;border:1px solid #3d4d60;background:linear-gradient(145deg,#1a293b,#111d2b);box-shadow:var(--shadow)}
+    .game-browser-top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+    .game-browser-top .result-sub{margin-top:4px;max-width:680px}
+    .game-picker-row{display:flex;align-items:flex-end;gap:11px;flex-wrap:wrap;margin:23px 0}
+    .game-picker-row .rating-field{flex:1 1 330px}
+    .game-picker-row select{max-width:700px}
+    .game-view .variant-choice{margin:-3px 0 22px;max-width:400px}
+    .game-info{display:flex;align-items:flex-start;gap:19px;padding:21px 22px;background:linear-gradient(130deg,#253549,#1a2739);border:1px solid #465b6e;border-radius:17px}
+    .game-info-visual{width:82px;min-height:102px;flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:linear-gradient(145deg,hsl(var(--hue) 38% 37% / .9),hsl(var(--hue) 30% 18% / .75));border:1px solid hsl(var(--hue) 40% 56% / .4);border-radius:11px;font-size:33px}
+    .game-info-text h3{font-size:25px;line-height:1.2;letter-spacing:-.7px;margin:1px 0 5px}
+    .game-info-text p{color:var(--muted);font-size:12px;margin:5px 0 10px;max-width:820px}
+    .game-info-text .tags{margin:7px 0}
+    .game-browser h3.subhead{font-size:16px;letter-spacing:-.2px;margin:27px 0 7px}
+    .game-section-help{font-size:12px;color:var(--muted);margin:0 0 13px}
+    .fit-profiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .fit-profile{background:#182637;border:1px solid #354b60;border-radius:15px;padding:16px;display:flex;flex-direction:column;gap:8px}
+    .fit-profile.top-fit{border-color:#789a65;background:linear-gradient(130deg,#25392e,#1c2a36)}
+    .fit-profile-head{display:flex;align-items:center;gap:7px;justify-content:space-between;flex-wrap:wrap}
+    .fit-profile-name{font-size:14px;font-weight:850}
+    .fit-profile-scope{font-size:11px;color:var(--muted);line-height:1.55}
+    .fit-profile-scope strong{color:#e9f6d5}
+    .fit-profile-rank{font-size:11px;color:#ced7e3}
+    .fit-action{align-self:flex-start;background:transparent;border:1px solid #566d84;color:var(--accent);border-radius:8px;padding:8px 10px;font-weight:780;font-size:11px;margin-top:auto}
+    .fit-action:hover{background:#2d4144}
+    .matrix-legend{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:14px 0 10px}
+    .legend-item{color:#b7c7d9;font-size:10px;display:inline-flex;align-items:center;gap:6px}
+    .legend-dot{width:10px;height:10px;border-radius:3px;background:#3b495b}
+    .legend-dot.ideal{background:#7ba853}.legend-dot.good{background:#6089b2}.legend-dot.situation{background:#7a7d96}.legend-dot.variant{background:#b67e38}.legend-dot.no{background:#333e4c}
+    .matrix-scroll{overflow-x:auto;border:1px solid #3c5064;border-radius:14px;scrollbar-color:#516581 #1b2938}
+    .fit-matrix{border-collapse:separate;border-spacing:4px;width:100%;min-width:770px;font-size:11px}
+    .fit-matrix th{font-size:11px;color:#b6c8da;font-weight:780;text-align:center;padding:10px 5px}
+    .fit-matrix thead th{border-bottom:1px solid #34475a}
+    .fit-matrix tbody th{width:150px;min-width:150px;text-align:left;color:#e9f0f5;font-size:11px;padding:8px}
+    .fit-matrix td{padding:0;text-align:center;vertical-align:middle}
+    .fit-cell{height:51px;min-width:65px;width:100%;border:1px solid transparent;border-radius:8px;background:#263548;color:#e2f0f8;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font-size:11px}
+    .fit-cell b{font-size:14px}
+    .fit-cell small{font-size:9px;color:inherit;opacity:.87}
+    button.fit-cell{cursor:pointer}
+    button.fit-cell:hover{outline:2px solid #e6f6ca;outline-offset:0;filter:brightness(1.18)}
+    .fit-cell.ideal{background:#2c4837;border-color:#4d8458;color:#dcf4c2}
+    .fit-cell.good{background:#25425d;border-color:#426c91;color:#deedfa}
+    .fit-cell.situation{background:#303b50;border-color:#515e77;color:#d5dbef}
+    .fit-cell.variant{background:#493925;border-color:#8d6840;color:#fce3ba}
+    .fit-cell.inactive{background:#1d2835;color:#748399;border-color:#303d4d}
+    .matrix-note{font-size:11px;color:#94a8bb;margin:12px 0 0;line-height:1.6}
+    @media(max-width:760px){.view-tabs{display:flex;margin-top:23px;width:100%}.view-tab{flex:1;font-size:12px;padding:10px 8px;white-space:normal;line-height:1.3}.game-view{padding-top:10px;padding-bottom:36px}.game-browser{padding:17px;border-radius:18px}.fit-profiles{grid-template-columns:1fr}.game-info{padding:15px;gap:13px}.game-info-visual{width:65px;min-height:86px;font-size:27px}.game-info-text h3{font-size:21px}.game-browser-top{align-items:flex-start}.game-picker-row{margin:17px 0}}
+    @media(max-width:410px){.game-info-visual{width:52px;min-height:75px;font-size:23px}.game-info-text h3{font-size:18px}.card-links{gap:5px}.viewgame-link,.rate-link{font-size:10px;padding:5px 7px}}
+  </style>
+</head>
+<body>
+  <header class="site-head"><div class="wrap head-inner">
+    <a class="brand" href="#top" aria-label="Mesa Certa, início"><span class="brand-mark" aria-hidden="true">⚄</span><span><span class="brand-name">MESA CERTA</span><span class="brand-sub">Seu guia pessoal de jogos</span></span></a>
+    <div class="head-chip" id="headerCount">40 jogos na coleção</div>
+  </div></header>
+  <main id="top">
+    <section class="hero wrap">
+      <div class="eyebrow">COLEÇÃO PESSOAL · GUIA INTERATIVO</div>
+      <h1>Qual jogo colocar<br/><span class="soft">na mesa hoje?</span></h1>
+      <p class="intro">Escolha quem vai jogar e o tamanho do grupo. Veja as melhores opções <strong>entre os 40 jogos que você ainda tem</strong>. As tuas avaliações podem mudar o ranking conforme a experiência real de cada grupo.</p>
+      <div class="view-tabs" role="tablist" aria-label="Modo de consulta">
+        <button class="view-tab active" id="tabMesa" role="tab" aria-selected="true" aria-controls="resultados" type="button" data-viewmode="mesa"><span aria-hidden="true">🎲</span> Escolher pela mesa</button>
+        <button class="view-tab" id="tabJogo" role="tab" aria-selected="false" aria-controls="consultaJogo" type="button" data-viewmode="jogo"><span aria-hidden="true">🔎</span> Explorar por jogo</button>
+      </div>
+      <div class="control-panel" id="mesaControls" aria-label="Filtros para escolher jogos">
+        <div class="section-head"><h2 class="section-title">01 / Qual é o perfil da mesa?</h2><span class="section-meta">Selecione um perfil</span></div>
+        <div class="profile-row" id="profileButtons" role="group" aria-label="Perfil do grupo"></div>
+        <div class="profile-desc" id="profileDescription" aria-live="polite"></div>
+        <hr class="divider" />
+        <div class="control-bottom">
+          <div><div class="section-head"><h2 class="section-title">02 / Quantas pessoas?</h2></div><div class="people-buttons" id="peopleButtons" role="group" aria-label="Quantidade de jogadores"></div></div>
+          <label class="variant-choice"><span class="toggle"><input id="variantInput" type="checkbox" checked/><span class="toggle-track"></span></span><span class="variant-text"><strong>Considerar variantes para grupos maiores</strong><small>Identificadas como comunitárias ou experimentais</small></span></label>
+        </div>
+      </div>
+    </section>
+    <section class="results wrap" id="resultados" aria-live="polite">
+      <div class="result-head"><div><div class="result-eyebrow" id="resultsCount">RECOMENDAÇÕES PERSONALIZADAS</div><h2 id="resultsTitle">Top 10 da mesa</h2><p class="result-sub" id="resultsSubtitle"></p></div><div class="actions"><button id="jumpRating" class="action-btn" type="button" title="Avaliar os jogos da coleção"><span aria-hidden="true">★</span> Minhas notas</button><button id="copyList" class="action-btn" type="button" title="Copiar o ranking atual"><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>Copiar ranking</button><button id="copyLink" class="action-btn" type="button" title="Copiar link com filtros"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7.1-7.1l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7.1 7.1l1.7-1.7"/></svg>Copiar link</button></div></div>
+      <div id="limitNote" class="callout" hidden></div>
+      <div class="result-grid" id="resultGrid"></div>
+      <div class="helper"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg><span>O ranking combina a análise inicial da coleção com as tuas avaliações pessoais, quando existirem. <strong>Jogos fora da quantidade suportada e variantes desativadas permanecem de fora.</strong> Se não houver dez opções adequadas, a lista será menor.</span></div>
+    </section>
+    <section class="game-view wrap" id="consultaJogo" role="tabpanel" aria-labelledby="tabJogo" hidden>
+      <div class="game-browser">
+        <div class="game-browser-top">
+          <div><div class="result-eyebrow">VISÃO POR JOGO · COLEÇÃO COMPLETA</div><h2>Onde esse jogo funciona melhor?</h2><p class="result-sub">Escolhe um título ou clica no nome de um jogo no Top 10. Descobre os melhores perfis de mesa e quantidades de jogadores, com as tuas notas incluídas.</p></div>
+          <button id="gameBackToMesa" type="button" class="action-btn">← Voltar ao ranking</button>
+        </div>
+        <div class="game-picker-row">
+          <label class="rating-field">Selecionar um dos meus jogos<select id="gameSelect" aria-label="Selecionar jogo para consultar"></select></label>
+          <button id="gameGoRating" class="action-btn" type="button">★ Avaliar este jogo</button>
+          <button id="gameCopyLink" class="action-btn" type="button">↗ Copiar link deste jogo</button>
+        </div>
+        <label class="variant-choice"><span class="toggle"><input id="gameVariantInput" type="checkbox" checked/><span class="toggle-track"></span></span><span class="variant-text"><strong>Mostrar variantes de 7–8 jogadores</strong><small>Inclui adaptações comunitárias ou ainda não testadas</small></span></label>
+        <div id="gameInfo" aria-live="polite"></div>
+        <h3 class="subhead">Melhores mesas para este jogo</h3>
+        <p class="game-section-help">Em ordem de adequação. As posições correspondem ao ranking completo de cada mesa, inclusive quando o jogo não está entre os 10 primeiros.</p>
+        <div class="fit-profiles" id="gameFits"></div>
+        <h3 class="subhead">Mapa completo: 2 a 8 jogadores</h3>
+        <p class="game-section-help">Cada célula mostra o posicionamento do jogo para aquele grupo. Seleciona uma célula colorida para abrir o ranking dessa mesa.</p>
+        <div class="matrix-legend" aria-hidden="true"><span class="legend-item"><i class="legend-dot ideal"></i> Muito indicado</span><span class="legend-item"><i class="legend-dot good"></i> Boa escolha</span><span class="legend-item"><i class="legend-dot situation"></i> Situacional</span><span class="legend-item"><i class="legend-dot variant"></i> Variante não oficial</span><span class="legend-item"><i class="legend-dot no"></i> Fora / pouco indicado</span></div>
+        <div class="matrix-scroll" id="gameMatrix"></div>
+        <p class="matrix-note" id="gameMatrixNote"></p>
+      </div>
+    </section>
+    <section class="ratings wrap" id="avaliacoes" aria-labelledby="ratingsTitle">
+      <div class="rating-shell">
+        <div class="rating-header">
+          <div><div class="result-eyebrow">TEU FEEDBACK É PARTE DO RANKING</div><h2 id="ratingsTitle">Minhas avaliações</h2><p class="result-sub">Dá notas reais depois de jogar. Cada perfil tem avaliações independentes, e tu podes registrar uma impressão específica com 2 a 8 pessoas.</p></div>
+          <div class="rating-count" id="ratingCount">Nenhuma avaliação registrada</div>
+        </div>
+        <div class="rating-editor">
+          <div class="rating-editor-head"><strong>01 / Avaliar um jogo</strong><small>Escala de 1 (muito ruim) a 5 (excelente). Campos vazios são neutros.</small></div>
+          <div class="rating-picker-grid">
+            <label class="rating-field">Jogo da coleção<select id="ratingGame" aria-label="Jogo a avaliar"></select></label>
+            <label class="rating-field">Perfil de mesa<select id="ratingProfile" aria-label="Perfil que será avaliado"></select></label>
+            <label class="rating-field full">Em quais mesas vale essa avaliação?<select id="ratingScope"><option value="geral">Nesse perfil, para todas as quantidades compatíveis</option><option value="especifico">Somente com o número atual de jogadores</option></select></label>
+          </div>
+          <p class="context-hint" id="ratingScopeHint"></p>
+          <div class="rating-criteria" id="ratingCriteria"></div>
+          <label class="rating-field rating-note">Observação pessoal (opcional)<textarea id="ratingNote" rows="2" maxlength="1500" placeholder="Ex.: Com 6 pessoas ficou lento; com 4 funcionou muito bem. O pessoal entendeu rápido."></textarea></label>
+          <div class="rating-controls"><button class="save-rating" id="saveRating" type="button">★ Salvar avaliação</button><button class="secondary-rating" id="deleteRating" type="button">Limpar esta avaliação</button><span id="ratingSavedLabel" class="saved-label" role="status"></span></div>
+        </div>
+        <div class="rating-settings">
+          <div class="weight-copy"><strong>02 / Peso das minhas notas</strong><p>O ranking original continua como referência. Quanto maior o peso, mais a tua experiência pode mudar a ordem. Jogos ainda não avaliados recebem nota neutra, sem serem penalizados.</p></div>
+          <div class="weight-slider"><label for="ratingWeight"><span>Influência pessoal</span><output id="weightValue" for="ratingWeight">50%</output></label><input id="ratingWeight" type="range" min="0" max="80" step="10" value="50"/><div class="weight-ends"><span>Só análise inicial</span><span>Mais peso pessoal</span></div></div>
+        </div>
+        <div class="rating-backup">
+          <div><strong>03 / Salvar e levar minhas notas</strong><p>As notas ficam salvas <strong>neste navegador</strong>, não no link. Exporte um arquivo JSON para backup, para usar em outro dispositivo ou para me enviar numa futura atualização do site.</p></div>
+          <div class="backup-buttons"><button id="exportRatings" class="action-btn" type="button">↓ Exportar minhas notas</button><button id="importRatings" class="action-btn" type="button">↑ Importar notas</button><input type="file" id="ratingFile" accept=".json,application/json" hidden/></div>
+        </div>
+        <div class="rating-history-title"><strong>Avaliações registradas</strong><span id="historyHint">Nenhuma ainda</span></div>
+        <div class="rating-history" id="ratingHistory"></div>
+      </div>
+    </section>
+    <section class="extras wrap"><details id="homeRules"><summary>⚓ Consultar nossas regras do Skull King Familiar</summary><p>As regras abaixo são oficiais <strong>da nossa mesa</strong>, e não o regulamento integral publicado pela editora.</p><div id="rulesContent"></div></details></section>
+  </main>
+  <footer class="wrap footer"><span>Feito exclusivamente com a tua coleção · <span id="footerCount">40</span> jogos-base, expansões agrupadas ao jogo principal</span><span>Base atualizada em <span id="lastUpdated">06/11/2026</span> · <strong>Para atualizar:</strong> editar <code>dados/colecao.json</code></span></footer>
+  <div id="toast" role="status" aria-live="polite" class="toast"></div>
+  <script id="embeddedData" type="application/json">{"versao":"2026-11-06","origem":"Mesa Certa: 40 jogos-base ativos; doações removidas em 06/11/2026. Rankings editoriais complementados por avaliações pessoais salvas localmente.","perfis":[{"id":"familia","nome":"Família","icone":"🏡","descricao":"Interação, regras simples e familiaridade com carteados."},{"id":"casuais","nome":"Amigos casuais","icone":"🎲","descricao":"Caos, ataques, controle de área e partidas até 90 minutos."},{"id":"estrategicos","nome":"Amigos estratégicos","icone":"♟️","descricao":"Decisões interessantes e planejamento, sem exigir especialistas."},{"id":"casais","nome":"Namorada e casais","icone":"💛","descricao":"Duelo a dois e boas experiências com outros casais."},{"id":"churrasco","nome":"Churrasco","icone":"🔥","descricao":"Risadas, blefe, provocações e explicação rápida."}],"jogos":[{"id":"survive-the-island","nome":"Survive: The Island","jogadores":"2–5","afinidade":{"familia":"Bom","casuais":"Muito forte","estrategicos":"Situacional","casais":"Bom","churrasco":"Bom"},"classificacao":{"familia":{"2":"SITUACIONAL","3":"BOA","4":"BOA","5":"BOA","6":"—","7":"—","8":"—"},"casuais":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"—","7":"—","8":"—"},"estrategicos":{"2":"POUCO INDICADO","3":"SITUACIONAL","4":"SITUACIONAL","5":"SITUACIONAL","6":"—","7":"—","8":"—"},"casais":{"2":"SITUACIONAL","3":"BOA","4":"PRIORIDADE","5":"PRIORIDADE","6":"—","7":"—","8":"—"},"churrasco":{"2":"SITUACIONAL","3":"BOA","4":"PRIORIDADE","5":"PRIORIDADE","6":"—","7":"—","8":"—"}},"observacao":"Confronto direto; menos forte com 2.","fonte":"https://boardgamegeek.com/boardgame/425428/survive-the-island","variante":null,"ajustes":{}},{"id":"magical-athlete-2025","nome":"Magical Athlete (2025)","jogadores":"2–6","afinidade":{"familia":"Bom","casuais":"Muito forte","estrategicos":"Menos indicado","casais":"Muito forte","churrasco":"Muito forte"},"classificacao":{"familia":{"2":"SITUACIONAL","3":"BOA","4":"BOA","5":"PRIORIDADE","6":"PRIORIDADE","7":"—","8":"—"},"casuais":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"—","8":"—"},"estrategicos":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"SITUACIONAL","6":"SITUACIONAL","7":"—","8":"—"},"casais":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"—","8":"—"},"churrasco":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"—","8":"—"}},"observacao":"Poderes alteram a corrida; ótimo de 4 a 6.","fonte":"https://boardgamegeek.com/boardgame/454103/magical-athlete","variante":null,"ajustes":{}},{"id":"tiranos-da-umbreterna-2021","nome":"Tiranos da Umbreterna (2021)","jogadores":"2–4","afinidade":{"familia":"Menos indicado","casuais":"Menos indicado","estrategicos":"Muito forte","casais":"Situacional","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"—","6":"—","7":"—","8":"—"},"casuais":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"—","6":"—","7":"—","8":"—"},"estrategicos":{"2":"PRIORIDADE","3":"PRIORIDADE","4":"PRIORIDADE","5":"—","6":"—","7":"—","8":"—"},"casais":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"—","6":"—","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"—","6":"—","7":"—","8":"—"}},"observacao":"Deckbuilding e controle de área; exige mais explicação.","fonte":"https://boardgamegeek.com/boardgame/336847/tyrants-of-the-underdark-board-game","variante":null,"ajustes":{}},{"id":"small-world-of-warcraft","nome":"Small World of Warcraft","jogadores":"2–5","afinidade":{"familia":"Menos indicado","casuais":"Situacional","estrategicos":"Muito forte","casais":"Situacional","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"VAR. comunidade","7":"VAR. teste","8":"VAR. teste"},"casuais":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"SITUACIONAL","5":"SITUACIONAL","6":"VAR. comunidade","7":"VAR. teste","8":"VAR. teste"},"estrategicos":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"VAR. comunidade","7":"VAR. teste","8":"VAR. teste"},"casais":{"2":"POUCO INDICADO","3":"SITUACIONAL","4":"SITUACIONAL","5":"SITUACIONAL","6":"VAR. comunidade","7":"VAR. teste","8":"VAR. teste"},"churrasco":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"VAR. comunidade","7":"VAR. teste","8":"VAR. teste"}},"observacao":"Território; 6–8 só com propostas não oficiais.","fonte":"https://boardgamegeek.com/boardgame/309630/small-world-of-warcraft","variante":{"sete":"EXPERIMENTAL","oito":"EXPERIMENTAL","montagem":"7: seis ilhas para 7 facções (sem teste). 8: quatro duplas, quatro facções.","ressalva":"Não validada; 7 desaconselhado; 8 duplas não 8 facções.","parecer":"Não recomendar como mesa principal.","fonte":"https://boardgamegeek.com/thread/2950562/did-anyone-try-to-play-this-with-6-7-players"},"ajustes":{"6":"Uso de variante da comunidade: não é modo oficial."}},{"id":"clank-catacumbas","nome":"Clank! Catacumbas","jogadores":"2–4 (+5–6)","afinidade":{"familia":"Menos indicado","casuais":"Situacional","estrategicos":"Muito forte","casais":"Bom","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"—","8":"—"},"casuais":{"2":"POUCO INDICADO","3":"SITUACIONAL","4":"SITUACIONAL","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"—","8":"—"},"estrategicos":{"2":"PRIORIDADE","3":"PRIORIDADE","4":"PRIORIDADE","5":"BOA","6":"BOA","7":"—","8":"—"},"casais":{"2":"BOA","3":"BOA","4":"BOA","5":"SITUACIONAL","6":"SITUACIONAL","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"—","8":"—"}},"observacao":"Bando de Aventureiros é necessário para 5–6; pode alongar.","fonte":"https://boardgamegeek.com/boardgame/365717/clank-catacombs","variante":null,"ajustes":{"5":"Requer a expansão Bando de Aventureiros.","6":"Requer a expansão Bando de Aventureiros."}},{"id":"the-king-is-dead-segunda-edicao","nome":"The King Is Dead: Segunda Edição","jogadores":"2–4","afinidade":{"familia":"Menos indicado","casuais":"Menos indicado","estrategicos":"Muito forte","casais":"Situacional","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"—","6":"—","7":"—","8":"—"},"casuais":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"—","6":"—","7":"—","8":"—"},"estrategicos":{"2":"PRIORIDADE","3":"PRIORIDADE","4":"PRIORIDADE","5":"—","6":"—","7":"—","8":"—"},"casais":{"2":"BOA","3":"BOA","4":"SITUACIONAL","5":"—","6":"—","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"—","6":"—","7":"—","8":"—"}},"observacao":"Regras enxutas, decisões densas; exige reflexão.","fonte":"https://boardgamegeek.com/boardgame/319966/the-king-is-dead-second-edition","variante":null,"ajustes":{}},{"id":"splendor-pokemon","nome":"Splendor: Pokémon","jogadores":"2–4","afinidade":{"familia":"Bom","casuais":"Bom","estrategicos":"Bom","casais":"Bom","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"BOA","3":"BOA","4":"BOA","5":"—","6":"—","7":"—","8":"—"},"casuais":{"2":"BOA","3":"BOA","4":"BOA","5":"—","6":"—","7":"—","8":"—"},"estrategicos":{"2":"BOA","3":"BOA","4":"BOA","5":"—","6":"—","7":"—","8":"—"},"casais":{"2":"BOA","3":"BOA","4":"BOA","5":"—","6":"—","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"—","6":"—","7":"—","8":"—"}},"observacao":"Estratégia familiar simples, pouco confronto direto.","fonte":"https://boardgamegeek.com/boardgame/406291","variante":null,"ajustes":{}},{"id":"ethnos-second-edition","nome":"Ethnos: Second Edition","jogadores":"1–6","afinidade":{"familia":"Situacional","casuais":"Bom","estrategicos":"Muito forte","casais":"Muito forte","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"POUCO INDICADO","3":"SITUACIONAL","4":"SITUACIONAL","5":"SITUACIONAL","6":"SITUACIONAL","7":"—","8":"—"},"casuais":{"2":"SITUACIONAL","3":"BOA","4":"BOA","5":"BOA","6":"BOA","7":"—","8":"—"},"estrategicos":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"—","8":"—"},"casais":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"—","8":"—"}},"observacao":"Coleções e controle de área; acessível para estratégia.","fonte":"https://boardgamegeek.com/boardgame/432527/ethnos-2nd-edition","variante":null,"ajustes":{}},{"id":"toy-battle","nome":"Toy Battle","jogadores":"2–2","afinidade":{"familia":"Situacional","casuais":"Muito forte","estrategicos":"Bom","casais":"Bom","churrasco":"Bom"},"classificacao":{"familia":{"2":"SITUACIONAL","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"casuais":{"2":"PRIORIDADE","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"estrategicos":{"2":"BOA","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"casais":{"2":"BOA","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"churrasco":{"2":"BOA","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"}},"observacao":"Duelo veloz e tático, somente 2 pessoas.","fonte":"https://boardgamegeek.com/boardgame/434654/toy-battle","variante":null,"ajustes":{}},{"id":"king-of-tokyo-monster-box","nome":"King of Tokyo: Monster Box","jogadores":"2–6","afinidade":{"familia":"Bom","casuais":"Muito forte","estrategicos":"Situacional","casais":"Muito forte","churrasco":"Muito forte"},"classificacao":{"familia":{"2":"SITUACIONAL","3":"BOA","4":"BOA","5":"BOA","6":"BOA","7":"VAR. comunidade","8":"VAR. comunidade"},"casuais":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"VAR. comunidade","8":"VAR. comunidade"},"estrategicos":{"2":"POUCO INDICADO","3":"SITUACIONAL","4":"SITUACIONAL","5":"SITUACIONAL","6":"SITUACIONAL","7":"VAR. comunidade","8":"VAR. comunidade"},"casais":{"2":"SITUACIONAL","3":"BOA","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"VAR. comunidade","8":"VAR. comunidade"},"churrasco":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"VAR. comunidade","8":"VAR. comunidade"}},"observacao":"Confronto de dados; com 7–8 só variante comunitária.","fonte":"https://boardgamegeek.com/boardgame/336755/king-of-tokyo-monster-box","variante":{"sete":"COMUNIDADE","oito":"COMUNIDADE","montagem":"Variante publicada por fãs com ajustes para pontuação em Tóquio.","ressalva":"Eliminações precoces, espera e equilíbrio incerto.","parecer":"Apenas para turma que já gosta do jogo.","fonte":"https://boardgamegeek.com/thread/2694001/playing-with-7-plus-players"},"ajustes":{}},{"id":"claim-edicao-limitada","nome":"Claim: Edição Limitada","jogadores":"2–4","afinidade":{"familia":"Bom","casuais":"Situacional","estrategicos":"Bom","casais":"Bom","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"BOA","3":"BOA","4":"BOA","5":"—","6":"—","7":"—","8":"—"},"casuais":{"2":"BOA","3":"SITUACIONAL","4":"SITUACIONAL","5":"—","6":"—","7":"—","8":"—"},"estrategicos":{"2":"BOA","3":"BOA","4":"BOA","5":"—","6":"—","7":"—","8":"—"},"casais":{"2":"PRIORIDADE","3":"BOA","4":"BOA","5":"—","6":"—","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"—","6":"—","7":"—","8":"—"}},"observacao":"Vazas; versão da coleção suporta até 4.","fonte":"https://papergames.com.br/claim-edicao-limitada/","variante":null,"ajustes":{}},{"id":"cyclades-legendary-edition","nome":"Cyclades: Legendary Edition","jogadores":"2–6","afinidade":{"familia":"Menos indicado","casuais":"Menos indicado","estrategicos":"Muito forte","casais":"Situacional","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"—","8":"—"},"casuais":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"—","8":"—"},"estrategicos":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"—","8":"—"},"casais":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"SITUACIONAL","6":"SITUACIONAL","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"—","8":"—"}},"observacao":"Para 6, o modo oficial é em 3 duplas; longa duração.","fonte":"https://boardgamegeek.com/boardgame/380619/cyclades-legendary-edition","variante":null,"ajustes":{"6":"Modo oficial de 3 equipes de 2; confirmar a configuração na edição."}},{"id":"fliptoons","nome":"FlipToons","jogadores":"1–4","afinidade":{"familia":"Bom","casuais":"Situacional","estrategicos":"Situacional","casais":"Bom","churrasco":"Situacional"},"classificacao":{"familia":{"2":"BOA","3":"BOA","4":"BOA","5":"—","6":"—","7":"—","8":"—"},"casuais":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"—","6":"—","7":"—","8":"—"},"estrategicos":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"—","6":"—","7":"—","8":"—"},"casais":{"2":"BOA","3":"BOA","4":"BOA","5":"—","6":"—","7":"—","8":"—"},"churrasco":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"—","6":"—","7":"—","8":"—"}},"observacao":"Jogo visual leve; não exige confronto intenso.","fonte":"https://boardgamegeek.com/boardgame/449185/fliptoons","variante":null,"ajustes":{}},{"id":"seas-of-strife","nome":"Seas of Strife","jogadores":"3–6","afinidade":{"familia":"Muito forte","casuais":"Bom","estrategicos":"Bom","casais":"Bom","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"—","3":"BOA","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"VAR. teste","8":"VAR. teste"},"casuais":{"2":"—","3":"BOA","4":"BOA","5":"BOA","6":"BOA","7":"VAR. teste","8":"VAR. teste"},"estrategicos":{"2":"—","3":"BOA","4":"BOA","5":"BOA","6":"BOA","7":"VAR. teste","8":"VAR. teste"},"casais":{"2":"—","3":"BOA","4":"BOA","5":"BOA","6":"BOA","7":"VAR. teste","8":"VAR. teste"},"churrasco":{"2":"—","3":"POUCO INDICADO","4":"SITUACIONAL","5":"SITUACIONAL","6":"SITUACIONAL","7":"VAR. teste","8":"VAR. teste"}},"observacao":"Vazas; adaptações 7–8 alteram a composição do baralho.","fonte":"https://boardgamegeek.com/boardgame/225482/seas-of-strife","variante":{"sete":"EXPERIMENTAL","oito":"EXPERIMENTAL","montagem":"7: retirar 4 de 60 e dar 8 a cada. 8: retirar 4 e dar 7 a cada.","ressalva":"Altera naipes/ritmo; proposta não validada.","parecer":"Priorizar Skull King com 7/8.","fonte":"https://boardgamegeek.com/boardgame/225482/seas-of-strife"},"ajustes":{}},{"id":"clank-uma-aventura-de-construcao-de-baralho","nome":"Clank!: Uma Aventura de Construção de Baralho","jogadores":"2–4 (+5–6)","afinidade":{"familia":"Menos indicado","casuais":"Situacional","estrategicos":"Bom","casais":"Bom","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"—","8":"—"},"casuais":{"2":"POUCO INDICADO","3":"SITUACIONAL","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"—","8":"—"},"estrategicos":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"BOA","6":"SITUACIONAL","7":"—","8":"—"},"casais":{"2":"BOA","3":"BOA","4":"BOA","5":"SITUACIONAL","6":"SITUACIONAL","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"—","8":"—"}},"observacao":"Bando de Aventureiros necessário para 5–6.","fonte":"https://boardgamegeek.com/boardgame/201808/clank-a-deck-building-adventure","variante":null,"ajustes":{"5":"Requer a expansão Bando de Aventureiros.","6":"Requer a expansão Bando de Aventureiros."}},{"id":"agent-avenue","nome":"Agent Avenue","jogadores":"2 ou 4","afinidade":{"familia":"Situacional","casuais":"Situacional","estrategicos":"Bom","casais":"Muito forte","churrasco":"Situacional"},"classificacao":{"familia":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"—","6":"—","7":"—","8":"—"},"casuais":{"2":"BOA","3":"SITUACIONAL","4":"SITUACIONAL","5":"—","6":"—","7":"—","8":"—"},"estrategicos":{"2":"BOA","3":"SITUACIONAL","4":"BOA","5":"—","6":"—","7":"—","8":"—"},"casais":{"2":"PRIORIDADE","3":"BOA","4":"PRIORIDADE","5":"—","6":"—","7":"—","8":"—"},"churrasco":{"2":"BOA","3":"SITUACIONAL","4":"SITUACIONAL","5":"—","6":"—","7":"—","8":"—"}},"observacao":"3 jogadores: modo oficial 2 contra 1; 4: 2 contra 2.","fonte":"https://boardgamegeek.com/boardgame/422732/agent-avenue","variante":null,"ajustes":{}},{"id":"tag-team","nome":"Tag Team","jogadores":"2–2","afinidade":{"familia":"Menos indicado","casuais":"Situacional","estrategicos":"Bom","casais":"Bom","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"POUCO INDICADO","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"casuais":{"2":"SITUACIONAL","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"estrategicos":{"2":"BOA","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"casais":{"2":"BOA","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"}},"observacao":"Duelo tático e prático, apenas 2.","fonte":"https://boardgamegeek.com/boardgame/434906/tag-team","variante":null,"ajustes":{}},{"id":"splendor-marvel","nome":"Splendor: Marvel","jogadores":"2–4","afinidade":{"familia":"Situacional","casuais":"Situacional","estrategicos":"Bom","casais":"Bom","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"—","6":"—","7":"—","8":"—"},"casuais":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"—","6":"—","7":"—","8":"—"},"estrategicos":{"2":"BOA","3":"BOA","4":"BOA","5":"—","6":"—","7":"—","8":"—"},"casais":{"2":"BOA","3":"BOA","4":"BOA","5":"—","6":"—","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"—","6":"—","7":"—","8":"—"}},"observacao":"Estratégia acessível, menor interação direta.","fonte":"https://boardgamegeek.com/boardgame/293296/splendor-marvel","variante":null,"ajustes":{}},{"id":"o-senhor-dos-aneis-duelo-pela-terra-media","nome":"O Senhor dos Anéis: Duelo pela Terra-média","jogadores":"2–2","afinidade":{"familia":"Menos indicado","casuais":"Situacional","estrategicos":"Muito forte","casais":"Muito forte","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"POUCO INDICADO","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"casuais":{"2":"SITUACIONAL","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"estrategicos":{"2":"PRIORIDADE","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"casais":{"2":"PRIORIDADE","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"}},"observacao":"Excelente duelo; precisa explicar símbolos e estratégia.","fonte":"https://boardgamegeek.com/boardgame/421006/the-lord-of-the-rings-duel-for-middle-earth","variante":null,"ajustes":{}},{"id":"3-capitulos","nome":"3 Capítulos","jogadores":"2–6","afinidade":{"familia":"Bom","casuais":"Bom","estrategicos":"Situacional","casais":"Bom","churrasco":"Situacional"},"classificacao":{"familia":{"2":"SITUACIONAL","3":"BOA","4":"BOA","5":"BOA","6":"BOA","7":"—","8":"—"},"casuais":{"2":"BOA","3":"BOA","4":"BOA","5":"BOA","6":"BOA","7":"—","8":"—"},"estrategicos":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"BOA","5":"BOA","6":"BOA","7":"—","8":"—"},"casais":{"2":"BOA","3":"BOA","4":"BOA","5":"BOA","6":"BOA","7":"—","8":"—"},"churrasco":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"BOA","5":"BOA","6":"BOA","7":"—","8":"—"}},"observacao":"Draft e combinação de cartas em três etapas.","fonte":"https://boardgamegeek.com/boardgame/423517/3-chapters","variante":null,"ajustes":{}},{"id":"harmonies","nome":"Harmonies","jogadores":"1–4","afinidade":{"familia":"Bom","casuais":"Situacional","estrategicos":"Muito forte","casais":"Muito forte","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"BOA","3":"BOA","4":"BOA","5":"—","6":"—","7":"—","8":"—"},"casuais":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"—","6":"—","7":"—","8":"—"},"estrategicos":{"2":"PRIORIDADE","3":"PRIORIDADE","4":"PRIORIDADE","5":"—","6":"—","7":"—","8":"—"},"casais":{"2":"PRIORIDADE","3":"PRIORIDADE","4":"PRIORIDADE","5":"—","6":"—","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"—","6":"—","7":"—","8":"—"}},"observacao":"Quebra-cabeça visual; baixa interação direta.","fonte":"https://boardgamegeek.com/boardgame/414317/harmonies","variante":null,"ajustes":{}},{"id":"spicy","nome":"Spicy","jogadores":"2–6","afinidade":{"familia":"Bom","casuais":"Muito forte","estrategicos":"Situacional","casais":"Bom","churrasco":"Muito forte"},"classificacao":{"familia":{"2":"BOA","3":"BOA","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"VAR. teste","8":"VAR. teste"},"casuais":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"VAR. teste","8":"VAR. teste"},"estrategicos":{"2":"POUCO INDICADO","3":"SITUACIONAL","4":"SITUACIONAL","5":"SITUACIONAL","6":"SITUACIONAL","7":"VAR. teste","8":"VAR. teste"},"casais":{"2":"SITUACIONAL","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"VAR. teste","8":"VAR. teste"},"churrasco":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"VAR. teste","8":"VAR. teste"}},"observacao":"Blefe excelente; 7–8 apenas teste com 5 cartas iniciais.","fonte":"https://boardgamegeek.com/boardgame/299169/spicy","variante":{"sete":"EXPERIMENTAL","oito":"EXPERIMENTAL","montagem":"Teste anterior: começar com 5 cartas por pessoa.","ressalva":"Não há evidência de equilíbrio; monitorar ritmo e duração.","parecer":"Boa candidata a teste, nunca tratar como oficial.","fonte":"https://boardgamegeek.com/boardgame/299169/spicy"},"ajustes":{}},{"id":"sea-salt-paper","nome":"Sea Salt & Paper","jogadores":"2–4","afinidade":{"familia":"Bom","casuais":"Bom","estrategicos":"Bom","casais":"Muito forte","churrasco":"Situacional"},"classificacao":{"familia":{"2":"BOA","3":"BOA","4":"BOA","5":"—","6":"—","7":"—","8":"—"},"casuais":{"2":"BOA","3":"BOA","4":"BOA","5":"—","6":"—","7":"—","8":"—"},"estrategicos":{"2":"BOA","3":"BOA","4":"BOA","5":"—","6":"—","7":"—","8":"—"},"casais":{"2":"PRIORIDADE","3":"PRIORIDADE","4":"PRIORIDADE","5":"—","6":"—","7":"—","8":"—"},"churrasco":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"—","6":"—","7":"—","8":"—"}},"observacao":"Coleções rápidas; regras de pontuação precisam de exemplo.","fonte":"https://boardgamegeek.com/boardgame/367220/sea-salt-and-paper","variante":null,"ajustes":{}},{"id":"piratas-3a-ed-pets","nome":"Piratas! (3ª ed.) + Pets","jogadores":"2–6","afinidade":{"familia":"Situacional","casuais":"Muito forte","estrategicos":"Situacional","casais":"Bom","churrasco":"Muito forte"},"classificacao":{"familia":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"BOA","6":"SITUACIONAL","7":"—","8":"VAR. teste"},"casuais":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"—","8":"VAR. teste"},"estrategicos":{"2":"POUCO INDICADO","3":"SITUACIONAL","4":"SITUACIONAL","5":"SITUACIONAL","6":"SITUACIONAL","7":"—","8":"VAR. teste"},"casais":{"2":"SITUACIONAL","3":"BOA","4":"BOA","5":"BOA","6":"BOA","7":"—","8":"VAR. teste"},"churrasco":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"—","8":"VAR. teste"}},"observacao":"Confronto com cartas; 8 em duplas é só proposta caseira.","fonte":"https://ludopedia.com.br/jogo/piratas-3-edicao","variante":{"sete":"NÃO DEFINIDO","oito":"EXPERIMENTAL","montagem":"8: quatro duplas compartilham recursos. Para 7 não há montagem fechada.","ressalva":"Não é 8 pessoas individuais; 7 ainda sem variante consistente.","parecer":"Não indicar como primeira opção.","fonte":"https://ludopedia.com.br/jogo/piratas-3-edicao"},"ajustes":{}},{"id":"fantasy-realms","nome":"Fantasy Realms","jogadores":"2–6","afinidade":{"familia":"Menos indicado","casuais":"Menos indicado","estrategicos":"Bom","casais":"Situacional","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"—","8":"—"},"casuais":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"—","8":"—"},"estrategicos":{"2":"BOA","3":"BOA","4":"BOA","5":"BOA","6":"BOA","7":"—","8":"—"},"casais":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"SITUACIONAL","6":"SITUACIONAL","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"—","8":"—"}},"observacao":"Muitas combinações; exige leitura de efeitos.","fonte":"https://boardgamegeek.com/boardgame/223040/fantasy-realms","variante":null,"ajustes":{}},{"id":"cascadia","nome":"Cascadia","jogadores":"1–4","afinidade":{"familia":"Bom","casuais":"Situacional","estrategicos":"Muito forte","casais":"Muito forte","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"BOA","3":"BOA","4":"BOA","5":"—","6":"—","7":"—","8":"—"},"casuais":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"—","6":"—","7":"—","8":"—"},"estrategicos":{"2":"PRIORIDADE","3":"PRIORIDADE","4":"PRIORIDADE","5":"—","6":"—","7":"—","8":"—"},"casais":{"2":"PRIORIDADE","3":"PRIORIDADE","4":"PRIORIDADE","5":"—","6":"—","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"—","6":"—","7":"—","8":"—"}},"observacao":"Leve a médio; baixa interação direta.","fonte":"https://boardgamegeek.com/boardgame/295947/cascadia","variante":null,"ajustes":{}},{"id":"captain-flip","nome":"Captain Flip","jogadores":"2–5","afinidade":{"familia":"Muito forte","casuais":"Bom","estrategicos":"Situacional","casais":"Bom","churrasco":"Situacional"},"classificacao":{"familia":{"2":"PRIORIDADE","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"—","7":"—","8":"—"},"casuais":{"2":"BOA","3":"BOA","4":"BOA","5":"BOA","6":"—","7":"—","8":"—"},"estrategicos":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"SITUACIONAL","6":"—","7":"—","8":"—"},"casais":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"BOA","6":"—","7":"—","8":"—"},"churrasco":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"SITUACIONAL","6":"—","7":"—","8":"—"}},"observacao":"Escolher e colocar peças; explicação curta.","fonte":"https://boardgamegeek.com/boardgame/393325/captain-flip","variante":null,"ajustes":{}},{"id":"schotten-totten","nome":"Schotten Totten","jogadores":"2–2","afinidade":{"familia":"Bom","casuais":"Situacional","estrategicos":"Muito forte","casais":"Muito forte","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"BOA","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"casuais":{"2":"SITUACIONAL","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"estrategicos":{"2":"PRIORIDADE","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"casais":{"2":"PRIORIDADE","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"}},"observacao":"Duelo de formações e blefe tático.","fonte":"https://boardgamegeek.com/boardgame/372/schotten-totten","variante":null,"ajustes":{}},{"id":"ascension-edicao-10-anos","nome":"Ascension: Edição 10 anos","jogadores":"1–4","afinidade":{"familia":"Menos indicado","casuais":"Situacional","estrategicos":"Bom","casais":"Bom","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"—","6":"—","7":"—","8":"—"},"casuais":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"—","6":"—","7":"—","8":"—"},"estrategicos":{"2":"BOA","3":"BOA","4":"BOA","5":"—","6":"—","7":"—","8":"—"},"casais":{"2":"BOA","3":"BOA","4":"BOA","5":"—","6":"—","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"—","6":"—","7":"—","8":"—"}},"observacao":"Deckbuilding acessível, requer aprender mercado/combos.","fonte":"https://boardgamegeek.com/boardgame/325810/ascension-fourth-edition","variante":null,"ajustes":{}},{"id":"monopoly-pokemon-2025","nome":"Monopoly Pokémon (2025)","jogadores":"2–4","afinidade":{"familia":"Situacional","casuais":"Situacional","estrategicos":"Menos indicado","casais":"Situacional","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"—","6":"—","7":"—","8":"—"},"casuais":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"—","6":"—","7":"—","8":"—"},"estrategicos":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"—","6":"—","7":"—","8":"—"},"casais":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"—","6":"—","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"—","6":"—","7":"—","8":"—"}},"observacao":"Tema familiar; relativamente longo para churrasco.","fonte":"https://boardgamegeek.com/boardgame/439091/monopoly-pokemon-edition","variante":null,"ajustes":{}},{"id":"munchkin","nome":"Munchkin","jogadores":"3–6","afinidade":{"familia":"Menos indicado","casuais":"Menos indicado","estrategicos":"Menos indicado","casais":"Menos indicado","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"—","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"VAR. teste","8":"VAR. teste"},"casuais":{"2":"—","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"VAR. teste","8":"VAR. teste"},"estrategicos":{"2":"—","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"VAR. teste","8":"VAR. teste"},"casais":{"2":"—","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"VAR. teste","8":"VAR. teste"},"churrasco":{"2":"—","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"VAR. teste","8":"VAR. teste"}},"observacao":"Muita negociação; tempo e eliminações podem incomodar.","fonte":"https://boardgamegeek.com/boardgame/1927/munchkin","variante":{"sete":"EXPERIMENTAL","oito":"EXPERIMENTAL","montagem":"Proposta anterior sem regras detalhadas suficientes.","ressalva":"Tende a exceder 90 min; não validado com 7–8.","parecer":"Não recomendar.","fonte":"https://boardgamegeek.com/boardgame/1927/munchkin"},"ajustes":{}},{"id":"cockroach-poker-royal","nome":"Cockroach Poker Royal","jogadores":"2–6","afinidade":{"familia":"Bom","casuais":"Muito forte","estrategicos":"Menos indicado","casais":"Bom","churrasco":"Muito forte"},"classificacao":{"familia":{"2":"SITUACIONAL","3":"BOA","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"VAR. teste","8":"VAR. teste"},"casuais":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"VAR. teste","8":"VAR. teste"},"estrategicos":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"VAR. teste","8":"VAR. teste"},"casais":{"2":"SITUACIONAL","3":"BOA","4":"BOA","5":"PRIORIDADE","6":"BOA","7":"VAR. teste","8":"VAR. teste"},"churrasco":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"VAR. teste","8":"VAR. teste"}},"observacao":"Blefe e provocação; 7–8 não são oficiais.","fonte":"https://boardgamegeek.com/boardgame/129736/cockroach-poker-royal","variante":{"sete":"EXPERIMENTAL","oito":"EXPERIMENTAL","montagem":"Manter regras de passar cartas para além do limite.","ressalva":"Pode ficar lento e desequilibrado.","parecer":"Teste opcional; 5–6 mais seguro.","fonte":"https://boardgamegeek.com/boardgame/129736/cockroach-poker-royal"},"ajustes":{}},{"id":"medievalia","nome":"Medievalia","jogadores":"2–6","afinidade":{"familia":"Menos indicado","casuais":"Situacional","estrategicos":"Situacional","casais":"Situacional","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"—","8":"—"},"casuais":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"SITUACIONAL","6":"SITUACIONAL","7":"—","8":"—"},"estrategicos":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"SITUACIONAL","6":"SITUACIONAL","7":"—","8":"—"},"casais":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"SITUACIONAL","6":"SITUACIONAL","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"—","8":"—"}},"observacao":"Cartas e interação; menos evidências sobre grupo ideal.","fonte":"https://ludopedia.com.br/jogo/medievalia","variante":null,"ajustes":{}},{"id":"dungeons-drinks","nome":"Dungeons & Drinks","jogadores":"2–6","afinidade":{"familia":"Situacional","casuais":"Bom","estrategicos":"Menos indicado","casais":"Bom","churrasco":"Bom"},"classificacao":{"familia":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"SITUACIONAL","6":"SITUACIONAL","7":"—","8":"—"},"casuais":{"2":"BOA","3":"BOA","4":"PRIORIDADE","5":"PRIORIDADE","6":"BOA","7":"—","8":"—"},"estrategicos":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"—","8":"—"},"casais":{"2":"SITUACIONAL","3":"BOA","4":"BOA","5":"BOA","6":"BOA","7":"—","8":"—"},"churrasco":{"2":"BOA","3":"BOA","4":"BOA","5":"BOA","6":"BOA","7":"—","8":"—"}},"observacao":"Cartas de humor e confrontos; depende da disposição da mesa.","fonte":"https://boardgamegeek.com/boardgame/313454/dungeons-and-drinks","variante":null,"ajustes":{}},{"id":"that-s-not-a-hat","nome":"That's Not a Hat","jogadores":"3–8","afinidade":{"familia":"Situacional","casuais":"Muito forte","estrategicos":"Menos indicado","casais":"Muito forte","churrasco":"Muito forte"},"classificacao":{"familia":{"2":"—","3":"SITUACIONAL","4":"SITUACIONAL","5":"SITUACIONAL","6":"SITUACIONAL","7":"SITUACIONAL","8":"SITUACIONAL"},"casuais":{"2":"—","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"PRIORIDADE","8":"PRIORIDADE"},"estrategicos":{"2":"—","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"POUCO INDICADO","6":"POUCO INDICADO","7":"POUCO INDICADO","8":"POUCO INDICADO"},"casais":{"2":"—","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"PRIORIDADE","8":"PRIORIDADE"},"churrasco":{"2":"—","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"PRIORIDADE","8":"PRIORIDADE"}},"observacao":"Memória e blefe; pode constranger quem não gosta de esquecer.","fonte":"https://boardgamegeek.com/boardgame/375651/thats-not-a-hat","variante":{"sete":"OFICIAL","oito":"OFICIAL","montagem":"Regras normais.","ressalva":"Exige memória; participantes podem não gostar da pressão.","parecer":"Recomendado em grupo descontraído.","fonte":"https://boardgamegeek.com/boardgame/375651/thats-not-a-hat"},"ajustes":{}},{"id":"war-game-of-thrones","nome":"War: Game of Thrones","jogadores":"2–4","afinidade":{"familia":"Menos indicado","casuais":"Menos indicado","estrategicos":"Situacional","casais":"Menos indicado","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"—","6":"—","7":"—","8":"—"},"casuais":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"—","6":"—","7":"—","8":"—"},"estrategicos":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"SITUACIONAL","5":"—","6":"—","7":"—","8":"—"},"casais":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"—","6":"—","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"POUCO INDICADO","4":"POUCO INDICADO","5":"—","6":"—","7":"—","8":"—"}},"observacao":"Confronto territorial, mas duração e regras pesam.","fonte":"https://ludopedia.com.br/jogo/war-game-of-thrones","variante":null,"ajustes":{}},{"id":"o-senhor-dos-aneis-o-confronto","nome":"O Senhor dos Anéis: O Confronto","jogadores":"2–2","afinidade":{"familia":"Menos indicado","casuais":"Situacional","estrategicos":"Muito forte","casais":"Bom","churrasco":"Menos indicado"},"classificacao":{"familia":{"2":"POUCO INDICADO","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"casuais":{"2":"SITUACIONAL","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"estrategicos":{"2":"PRIORIDADE","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"casais":{"2":"BOA","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"},"churrasco":{"2":"POUCO INDICADO","3":"—","4":"—","5":"—","6":"—","7":"—","8":"—"}},"observacao":"Duelo assimétrico e estratégico, apenas 2.","fonte":"https://boardgamegeek.com/boardgame/18833/the-lord-of-the-rings-the-confrontation","variante":null,"ajustes":{}},{"id":"geeks-vs-trolls-caos-em-8","nome":"Geeks Vs Trolls + Caos em 8","jogadores":"1–6","afinidade":{"familia":"Situacional","casuais":"Muito forte","estrategicos":"Situacional","casais":"Bom","churrasco":"Muito forte"},"classificacao":{"familia":{"2":"POUCO INDICADO","3":"SITUACIONAL","4":"SITUACIONAL","5":"SITUACIONAL","6":"SITUACIONAL","7":"SITUACIONAL","8":"SITUACIONAL"},"casuais":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"PRIORIDADE","8":"PRIORIDADE"},"estrategicos":{"2":"POUCO INDICADO","3":"SITUACIONAL","4":"SITUACIONAL","5":"SITUACIONAL","6":"SITUACIONAL","7":"SITUACIONAL","8":"SITUACIONAL"},"casais":{"2":"SITUACIONAL","3":"BOA","4":"BOA","5":"PRIORIDADE","6":"PRIORIDADE","7":"BOA","8":"BOA"},"churrasco":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"PRIORIDADE","8":"PRIORIDADE"}},"observacao":"Usar Caos em 8 nas mesas de 7/8; pode haver eliminação.","fonte":"https://ludopedia.com.br/jogo/geeks-vs-trolls","variante":{"sete":"OFICIAL + EXP.","oito":"OFICIAL + EXP.","montagem":"Usar a expansão; modo Duelo de Clãs também disponível.","ressalva":"Eliminação pode deixar gente esperando.","parecer":"Recomendado quando querem confrontos.","fonte":"https://www.catarse.com.br/geeksvstrolls/updates"},"ajustes":{"7":"Requer a expansão Caos em 8.","8":"Requer a expansão Caos em 8."}},{"id":"codenames-imagens","nome":"Codenames: Imagens","jogadores":"4–8+ (equipes); 2–3 modos especiais","afinidade":{"familia":"Bom","casuais":"Muito forte","estrategicos":"Bom","casais":"Muito forte","churrasco":"Muito forte"},"classificacao":{"familia":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"BOA","5":"PRIORIDADE","6":"PRIORIDADE","7":"PRIORIDADE","8":"PRIORIDADE"},"casuais":{"2":"SITUACIONAL","3":"BOA","4":"BOA","5":"PRIORIDADE","6":"PRIORIDADE","7":"PRIORIDADE","8":"PRIORIDADE"},"estrategicos":{"2":"POUCO INDICADO","3":"SITUACIONAL","4":"SITUACIONAL","5":"BOA","6":"BOA","7":"BOA","8":"BOA"},"casais":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"BOA","5":"PRIORIDADE","6":"PRIORIDADE","7":"PRIORIDADE","8":"PRIORIDADE"},"churrasco":{"2":"SITUACIONAL","3":"SITUACIONAL","4":"BOA","5":"PRIORIDADE","6":"PRIORIDADE","7":"PRIORIDADE","8":"PRIORIDADE"}},"observacao":"Equipes oficialmente em 4–8+; modos 2 coop e 3 assimétrico.","fonte":"https://boardgamegeek.com/boardgame/198773/codenames-pictures","variante":{"sete":"OFICIAL (EQUIPES)","oito":"OFICIAL (EQUIPES)","montagem":"2 equipes: 7 = 4x3; 8 = 4x4.","ressalva":"Com 7, equipes de tamanhos diferentes.","parecer":"Excelente para grupos grandes.","fonte":"https://www.czechgames.com/games/codenames-pictures"},"ajustes":{"7":"Duas equipes, normalmente com 4 contra 3.","8":"Duas equipes com 4 pessoas em cada."}},{"id":"skull-king","nome":"Skull King","jogadores":"2–8 (edição atual)","afinidade":{"familia":"Muito forte","casuais":"Bom","estrategicos":"Bom","casais":"Muito forte","churrasco":"Situacional"},"classificacao":{"familia":{"2":"BOA","3":"PRIORIDADE","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"PRIORIDADE","8":"PRIORIDADE"},"casuais":{"2":"SITUACIONAL","3":"BOA","4":"BOA","5":"BOA","6":"BOA","7":"BOA","8":"BOA"},"estrategicos":{"2":"SITUACIONAL","3":"BOA","4":"BOA","5":"PRIORIDADE","6":"PRIORIDADE","7":"BOA","8":"BOA"},"casais":{"2":"BOA","3":"BOA","4":"PRIORIDADE","5":"PRIORIDADE","6":"PRIORIDADE","7":"BOA","8":"BOA"},"churrasco":{"2":"POUCO INDICADO","3":"SITUACIONAL","4":"SITUACIONAL","5":"SITUACIONAL","6":"SITUACIONAL","7":"SITUACIONAL","8":"SITUACIONAL"}},"observacao":"Na família usar 1/3/5/7/9 + pontuação clássica sem bônus; com 8, 1/3/5/7/7.","fonte":"https://boardgamegeek.com/boardgame/150145/skull-king","variante":{"sete":"OFICIAL","oito":"OFICIAL","montagem":"Versão familiar: 1,3,5,7,9 com 7; 1,3,5,7,7 com 8.","ressalva":"Confirmar 65 cartas na nossa seleção; sem bônus.","parecer":"Melhor com a mesa conhecendo vazas.","fonte":"https://www.grandpabecksgames.com/pages/skull-king"},"ajustes":{"7":"Nossa versão familiar usa 1, 3, 5, 7 e 9 cartas.","8":"Nossa versão familiar usa 1, 3, 5, 7 e 7 cartas. Baralho de 65 cartas."}}],"escolhasRapidas":{"familia":{"2":["Captain Flip","Cascadia","Harmonies","Skull King"],"3":["Captain Flip","Skull King","Spicy","Seas of Strife"],"4":["Skull King","Captain Flip","Spicy","Seas of Strife"],"5":["Skull King","Seas of Strife","Captain Flip","Cockroach Poker Royal"],"6":["Skull King","Seas of Strife","Codenames: Imagens","Cockroach Poker Royal"],"7":["Skull King","Codenames: Imagens","That's Not a Hat","Geeks Vs Trolls + Caos em 8"],"8":["Codenames: Imagens","Skull King","That's Not a Hat","Geeks Vs Trolls + Caos em 8"]},"casuais":{"2":["Toy Battle","Spicy","Geeks Vs Trolls + Caos em 8","Dungeons & Drinks"],"3":["Spicy","Survive: The Island","Magical Athlete (2025)","Geeks Vs Trolls + Caos em 8"],"4":["Survive: The Island","Spicy","Magical Athlete (2025)","Geeks Vs Trolls + Caos em 8"],"5":["Magical Athlete (2025)","Spicy","Survive: The Island","Cockroach Poker Royal"],"6":["Magical Athlete (2025)","Geeks Vs Trolls + Caos em 8","Spicy","Cockroach Poker Royal"],"7":["Geeks Vs Trolls + Caos em 8","Codenames: Imagens","That's Not a Hat","Skull King"],"8":["Codenames: Imagens","Geeks Vs Trolls + Caos em 8","That's Not a Hat","Skull King"]},"estrategicos":{"2":["The King Is Dead: Segunda Edição","O Senhor dos Anéis: Duelo pela Terra-média","Tiranos da Umbreterna (2021)","O Senhor dos Anéis: O Confronto"],"3":["Tiranos da Umbreterna (2021)","The King Is Dead: Segunda Edição","Cyclades: Legendary Edition","Ethnos: Second Edition"],"4":["Tiranos da Umbreterna (2021)","Cyclades: Legendary Edition","Ethnos: Second Edition","The King Is Dead: Segunda Edição"],"5":["Cyclades: Legendary Edition","Ethnos: Second Edition","Small World of Warcraft","Skull King"],"6":["Ethnos: Second Edition","Cyclades: Legendary Edition","Skull King","Fantasy Realms"],"7":["Skull King","Codenames: Imagens","Geeks Vs Trolls + Caos em 8","Small World of Warcraft"],"8":["Codenames: Imagens","Skull King","Geeks Vs Trolls + Caos em 8","Small World of Warcraft"]},"casais":{"2":["O Senhor dos Anéis: Duelo pela Terra-média","Agent Avenue","Harmonies","Cascadia"],"3":["Harmonies","Cascadia","Ethnos: Second Edition","Magical Athlete (2025)"],"4":["Magical Athlete (2025)","Ethnos: Second Edition","Agent Avenue","Cascadia"],"5":["Magical Athlete (2025)","King of Tokyo: Monster Box","Ethnos: Second Edition","Codenames: Imagens"],"6":["Magical Athlete (2025)","Codenames: Imagens","Skull King","Ethnos: Second Edition"],"7":["Codenames: Imagens","That's Not a Hat","Geeks Vs Trolls + Caos em 8","Skull King"],"8":["Codenames: Imagens","That's Not a Hat","Geeks Vs Trolls + Caos em 8","Skull King"]},"churrasco":{"2":["Spicy","Dungeons & Drinks","Magical Athlete (2025)","Piratas! (3ª ed.) + Pets"],"3":["Spicy","That's Not a Hat","Cockroach Poker Royal","Magical Athlete (2025)"],"4":["Spicy","Magical Athlete (2025)","That's Not a Hat","Cockroach Poker Royal"],"5":["Magical Athlete (2025)","Spicy","Cockroach Poker Royal","That's Not a Hat"],"6":["Magical Athlete (2025)","Spicy","That's Not a Hat","Cockroach Poker Royal"],"7":["That's Not a Hat","Geeks Vs Trolls + Caos em 8","Codenames: Imagens","Skull King"],"8":["That's Not a Hat","Geeks Vs Trolls + Caos em 8","Codenames: Imagens","Skull King"]}},"regrasDaCasa":{"titulo":"Skull King Familiar","regras":[{"regra":"Rodadas com 2–7 pessoas","padrao":"1, 3, 5, 7, 9 cartas","nota":"Cinco rodadas; recolher e embaralhar TODAS as cartas a cada rodada."},{"regra":"Rodadas com 8 pessoas","padrao":"1, 3, 5, 7, 7 cartas","nota":"O baralho simplificado de 65 cartas não comporta 8 × 9."},{"regra":"Naipes numerados","padrao":"Verde / amarelo / roxo / preto","nota":"Preto é trunfo; deve seguir o naipe quando jogar carta numerada."},{"regra":"Cartas especiais","padrao":"Fuga, Pirata, Sereia e Skull King","nota":"Podem ser jogadas mesmo com carta do naipe na mão."},{"regra":"Carta excluída","padrao":"Tigresa / Scary Mary","nota":"Fora por exigir escolha de efeito."},{"regra":"Extras excluídos","padrao":"Bônus, poderes avançados, Kraken, Baleia, Saque","nota":"Somente baralho simplificado e cartas acima."},{"regra":"Acertou aposta ≥1","padrao":"20 pontos por vaza apostada","nota":"Exemplo: apostou 3 e acertou = +60."},{"regra":"Errou aposta ≥1","padrao":"−10 pontos por vaza de diferença","nota":"Exemplo: apostou 3, fez 2 = −10."},{"regra":"Apostou zero e acertou","padrao":"10 pontos por carta da rodada","nota":"Exemplo: 5 cartas = +50."},{"regra":"Apostou zero e errou","padrao":"−10 pontos por carta da rodada","nota":"Exemplo: 5 cartas = −50."},{"regra":"Facilitador","padrao":"Uma pessoa anota apostas e pontos","nota":"Manter carta de referência da hierarquia na mesa."},{"regra":"Status","padrao":"REGRA OFICIAL DA NOSSA MESA","nota":"Variante familiar definida em 06/11/2026, não regra publicada integral da editora."}]},"historico":{"atualizadoEm":"2026-11-06","removidos":["Jaipur","Claim","Claim 2","Flip 7","Rebel Princess","Trio"],"observacao":"Claim: Edição Limitada permanece; suas duas entradas duplicadas foram retiradas."}}</script>
+  <script>
+  (function () {
+    'use strict';
+    let DATA = JSON.parse(document.getElementById('embeddedData').textContent);
+    const params = new URLSearchParams(window.location.search);
+    const allowedProfiles = ['familia','casuais','estrategicos','casais','churrasco'];
+    const state = {
+      perfil: allowedProfiles.includes(params.get('perfil')) ? params.get('perfil') : 'familia',
+      pessoas: Math.min(8, Math.max(2, Math.round(Number(params.get('jogadores')) || 4))),
+      variantes: params.get('variantes') !== '0',
+      mode: params.get('modo')==='jogo'?'jogo':'mesa',
+      gameId: params.get('jogo')||'',
+      ratingGameId: '',
+      ratingProfile: '',
+      ratingScope: 'geral',
+      ratingPeople: 4
+    };
+    state.ratingProfile=state.perfil;
+    state.ratingPeople=state.pessoas;
+    const criteria = [
+      {id:'diversao',nome:'Diversão real',desc:'O quanto o grupo efetivamente se divertiu.'},
+      {id:'interacao',nome:'Interação entre jogadores',desc:'Conversa, ataques, provocações e participação.'},
+      {id:'facilidade',nome:'Facilidade de ensinar',desc:'Tempo para explicar e jogar sem dúvidas.'},
+      {id:'ritmo',nome:'Ritmo da partida',desc:'Fluidez, tempo de espera e duração adequada.'},
+      {id:'encaixe',nome:'Encaixe com esse perfil',desc:'O quanto combina com esse tipo de mesa.'}
+    ];
+    const criterionWeights = {
+      familia:{diversao:25,interacao:20,facilidade:30,ritmo:10,encaixe:15},
+      casuais:{diversao:25,interacao:25,facilidade:15,ritmo:15,encaixe:20},
+      estrategicos:{diversao:20,interacao:15,facilidade:10,ritmo:20,encaixe:35},
+      casais:{diversao:30,interacao:20,facilidade:15,ritmo:15,encaixe:20},
+      churrasco:{diversao:25,interacao:30,facilidade:25,ritmo:10,encaixe:10}
+    };
+    const storeKey='mesa-certa-avaliacoes-v2';
+    const $ = id => document.getElementById(id);
+    const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const dateBR = d => {const [y,m,day]=String(d).split('-');return day&&m&&y?`${day}/${m}/${y}`:d};
+    const labelStatus = { 'PRIORIDADE':'Muito indicado','BOA':'Boa escolha','SITUACIONAL':'Situacional','POUCO INDICADO':'Pouco indicado','VAR. teste':'Variante experimental','VAR. comunidade':'Variante da comunidade' };
+    const safeRating = x => Number.isInteger(Number(x)) && Number(x)>=1 && Number(x)<=5 ? Number(x) : 0;
+    const safeWeight = n => Number.isFinite(Number(n)) ? Math.min(80,Math.max(0,Math.round(Number(n)/10)*10)) : 50;
+    let latestResults = [];
+    let personal = readPersonal();
+    let toastTimer;
+    function readPersonal(){
+      try {const x=JSON.parse(localStorage.getItem(storeKey));return x && typeof x==='object' ? {peso:safeWeight(x.peso),avaliacoes:(x.avaliacoes && typeof x.avaliacoes==='object' && !Array.isArray(x.avaliacoes))?x.avaliacoes:{}} : {peso:50,avaliacoes:{}}}
+      catch(err){return {peso:50,avaliacoes:{}}}
+    }
+    function savePersonal(){
+      try{localStorage.setItem(storeKey,JSON.stringify(personal));return true}
+      catch(err){showToast('O navegador não pôde guardar as notas. Exporte um backup!');return false}
+    }
+    function showToast(message){const t=$('toast');t.textContent=message;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2800)}
+    function isVariant(status){return /^VAR\./.test(status)}
+    function getStatus(g){return g.classificacao[state.perfil]?.[String(state.pessoas)]}
+    function ratingKey(id,perfil,scope){return `${id}|${perfil}|${scope}`}
+    function entryFor(id,perfil,scope){const r=personal.avaliacoes[ratingKey(id,perfil,scope)];return r && typeof r==='object'?r:null}
+    function ownRatings(g,perfil,people){
+      const general=entryFor(g.id,perfil,'geral');
+      const specific=entryFor(g.id,perfil,String(people));
+      const combined={};
+      for(const c of criteria){
+        const v=safeRating(specific?.notas?.[c.id]) || safeRating(general?.notas?.[c.id]);
+        if(v)combined[c.id]=v;
+      }
+      const keys=Object.keys(combined);
+      if(!keys.length)return {has:false,score:50,display:null,scope:null,answered:0};
+      const w=criterionWeights[perfil];
+      // Missing criteria count as neutral (3/5), avoiding exaggerated changes from a single click.
+      let personalScore=50;
+      let sum=0,weight=0;
+      for(const c of criteria){
+        const v=combined[c.id];
+        if(v){personalScore+=(v-3)/2 * 50 * w[c.id]/100;sum+=v*w[c.id];weight+=w[c.id]}
+      }
+      return {has:true,score:personalScore,display:sum/weight,scope:(specific && Object.values(specific.notas||{}).some(x=>safeRating(x)))?'especifica':'geral',answered:keys.length};
+    }
+    function eligibleGames(perfil=state.perfil,pessoas=state.pessoas,variantes=state.variantes){
+      const pinned=(DATA.escolhasRapidas[perfil]||{})[String(pessoas)]||[];
+      const baseScore={'PRIORIDADE':80,'BOA':64,'SITUACIONAL':43,'VAR. comunidade':29,'VAR. teste':22};
+      const affinityBonus={'Muito forte':12,'Bom':7,'Situacional':3,'Menos indicado':-12};
+      return DATA.jogos.filter(g=>{
+        const s=g.classificacao[perfil]?.[String(pessoas)];
+        if(!s || s==='—' || s==='POUCO INDICADO')return false;
+        if(isVariant(s) && !variantes)return false;
+        if(isVariant(s) && (g.afinidade[perfil]==='Menos indicado'||g.nome==='Munchkin'))return false;
+        return true;
+      }).map(g=>{
+        const s=g.classificacao[perfil]?.[String(pessoas)],pin=pinned.indexOf(g.nome);
+        let editorial=(baseScore[s]||1)+(affinityBonus[g.afinidade[perfil]]||0)+(pin>=0?[82,66,50,34][pin]:0);
+        if(isVariant(s))editorial-=6;
+        if(g.nome==='Clank! Catacumbas' && pessoas>=5)editorial-=4;
+        return {...g,selectionStatus:s,editorial};
+      }).sort((a,b)=>b.editorial-a.editorial || a.nome.localeCompare(b.nome,'pt-BR'));
+    }
+    function rankAll(perfil=state.perfil,pessoas=state.pessoas,variantes=state.variantes){
+      const games=eligibleGames(perfil,pessoas,variantes);
+      const n=games.length;
+      const anyRated=games.some(g=>ownRatings(g,perfil,pessoas).has);
+      const w=anyRated ? personal.peso/100 : 0;
+      return games.map((g,i)=>{
+        const my=ownRatings(g,perfil,pessoas);
+        const editorialIndex=100-(n>1?i/(n-1):0)*65;
+        const score=editorialIndex*(1-w)+my.score*w;
+        return {...g,editorialIndex,score,my,editorialPosition:i+1};
+      }).sort((a,b)=>b.score-a.score || a.editorialPosition-b.editorialPosition);
+    }
+    function getBest(){return rankAll().slice(0,10)}
+    function getSupport(g){
+      const n=state.pessoas,s=g.selectionStatus;
+      if(isVariant(s))return s==='VAR. comunidade'?'Variante da comunidade':'Variante em teste';
+      if(g.nome.startsWith('Clank!')&&n>=5)return 'Requer expansão';
+      if(g.nome.startsWith('Geeks Vs Trolls')&&n>=7)return 'Com expansão';
+      if(g.nome==='Cyclades: Legendary Edition'&&n===6)return 'Equipes';
+      if(g.nome==='Codenames: Imagens'&&n>=4)return 'Em equipes';
+      if(g.nome==='Skull King')return 'Regra da nossa mesa';
+      return 'Suporte oficial';
+    }
+    // A visão por jogo reutiliza o MESMO motor de ranking da visão por mesa.
+    // A ordenação entre perfis leva em conta a adequação editorial, a posição no ranking e as avaliações pessoais.
+    function gameScenarioFits(g){
+      const fits=[];
+      for(const p of DATA.perfis){
+        for(let n=2;n<=8;n++){
+          const status=g.classificacao[p.id]?.[String(n)]||'—';
+          const ranked=rankAll(p.id,n,state.variantes);
+          const index=ranked.findIndex(item=>item.id===g.id);
+          const eligible=index>=0;
+          const my=ownRatings(g,p.id,n);
+          const tier={'PRIORIDADE':100,'BOA':74,'SITUACIONAL':44,'VAR. comunidade':24,'VAR. teste':18}[status]||0;
+          const desirability=tier+(eligible?Math.max(0,22-(index*2.5)):0)+(my.has?(my.score-50)*.13:0);
+          fits.push({perfil:p.id,profile:p,pessoas:n,status,eligible,rank:eligible?index+1:null,total:ranked.length,my,desirability});
+        }
+      }
+      return fits;
+    }
+    function fitClass(status,eligible){
+      if(status==='PRIORIDADE'&&eligible)return 'ideal';
+      if(status==='BOA'&&eligible)return 'good';
+      if(status==='SITUACIONAL'&&eligible)return 'situation';
+      if(isVariant(status))return eligible?'variant':'inactive';
+      return 'inactive';
+    }
+    function readableCounts(items){
+      if(!items.length)return '';
+      return items.map(i=>i.pessoas).join(', ');
+    }
+    function renderGameView(){
+      $('gameVariantInput').checked=state.variantes;
+      const games=DATA.jogos.slice().sort((a,b)=>a.nome.localeCompare(b.nome,'pt-BR'));
+      if(!games.length)return;
+      if(!DATA.jogos.some(g=>g.id===state.gameId))state.gameId=latestResults[0]?.id || games[0].id;
+      const g=DATA.jogos.find(x=>x.id===state.gameId);
+      $('gameSelect').innerHTML=games.map(x=>`<option value="${esc(x.id)}">${esc(x.nome)}</option>`).join('');
+      $('gameSelect').value=g.id;
+      const all=gameScenarioFits(g);
+      const eligible=all.filter(c=>c.eligible);
+      const priority=eligible.filter(c=>c.status==='PRIORIDADE');
+      const compatibleCount=new Set(eligible.map(x=>x.pessoas)).size;
+      const variantCount=eligible.filter(c=>isVariant(c.status)).length;
+      const myCount=DATA.perfis.reduce((acc,p)=>acc+Object.keys(personal.avaliacoes).filter(k=>k.startsWith(g.id+'|'+p.id+'|')).length,0);
+      $('gameInfo').innerHTML=`<div class="game-info"><div class="game-info-visual" style="--hue:${hashHue(g)}" aria-hidden="true">${icon(g)}</div><div class="game-info-text"><h3>${esc(g.nome)}</h3><div class="tags"><span class="tag">${esc(g.jogadores)} jogadores no catálogo</span><span class="tag ${priority.length?'ideal':''}">${priority.length?priority.length+' combinação(ões) muito indicadas':compatibleCount+' quantidades recomendáveis'}</span>${myCount?`<span class="tag personal">★ ${myCount} avaliação(ões) registrada(s)</span>`:''}</div><p>${esc(g.observacao)}</p>${g.ajustes && Object.keys(g.ajustes).length?'<p>Certas quantidades exigem regras específicas, expansões ou adaptações; veja o mapa abaixo.</p>':''}${variantCount?'<p>Há alternativas com variantes não oficiais; elas estão claramente identificadas.</p>':''}</div></div>`;
+      const profileSummaries=DATA.perfis.map(p=>{
+        const cases=eligible.filter(c=>c.perfil===p.id);
+        const sorted=cases.sort((a,b)=>b.desirability-a.desirability || a.rank-b.rank || a.pessoas-b.pessoas);
+        return {p,cases:sorted,best:sorted[0]||null,priority:sorted.filter(x=>x.status==='PRIORIDADE').sort((a,b)=>a.pessoas-b.pessoas),good:sorted.filter(x=>x.status==='BOA').sort((a,b)=>a.pessoas-b.pessoas)};
+      }).filter(x=>x.best).sort((a,b)=>b.best.desirability-a.best.desirability);
+      if(!profileSummaries.length){
+        $('gameFits').innerHTML='<div class="no-results">Não há mesas atualmente recomendadas para este título com as variantes selecionadas.</div>';
+      } else {
+        $('gameFits').innerHTML=profileSummaries.map((r,i)=>{
+          const best=r.best;
+          const note=best.my.has?` · Tua avaliação: ${best.my.display.toFixed(1).replace('.',',')}/5`:'';
+          const fitText=r.priority.length?`<strong>Ideal para:</strong> ${readableCounts(r.priority)} ${r.priority.length===1?'jogador':'jogadores'}`:r.good.length?`<strong>Boa opção para:</strong> ${readableCounts(r.good)} jogadores`:`<strong>Opções possíveis:</strong> ${readableCounts(r.cases)} jogadores`;
+          return `<div class="fit-profile ${i===0?'top-fit':''}"><div class="fit-profile-head"><span class="fit-profile-name">${esc(r.p.icone)} ${esc(r.p.nome)}</span><span class="tag ${best.status==='PRIORIDADE'?'ideal':isVariant(best.status)?'variant':''}">${esc(labelStatus[best.status]||best.status)}</span></div><div class="fit-profile-scope">${fitText}</div><div class="fit-profile-rank">Destaque: <strong>${best.pessoas} jogadores</strong> · <strong>${best.rank}º</strong> entre ${best.total} opções nesse grupo${note}.</div><button class="fit-action" data-gotable="${esc(r.p.id)}|${best.pessoas}" type="button">Ver ranking com ${best.pessoas} jogadores →</button></div>`;
+        }).join('');
+      }
+      const heads=Array.from({length:7},(_,i)=>i+2);
+      $('gameMatrix').innerHTML=`<table class="fit-matrix"><thead><tr><th scope="col">Perfil</th>${heads.map(n=>`<th scope="col">${n} ${n===1?'pessoa':'pessoas'}</th>`).join('')}</tr></thead><tbody>${DATA.perfis.map(p=>`<tr><th scope="row">${esc(p.icone)} ${esc(p.nome)}</th>${heads.map(n=>{
+        const c=all.find(x=>x.perfil===p.id&&x.pessoas===n);
+        const cls=fitClass(c.status,c.eligible);
+        const disabledVariant=isVariant(c.status)&&!state.variantes;
+        const label=c.eligible?`${c.rank}º`:disabledVariant?'var. off':c.status==='POUCO INDICADO'?'não indicado':'—';
+        const sub=c.eligible?`${labelStatus[c.status]||c.status}`:disabledVariant?'desativada':c.status==='POUCO INDICADO'?'evitar':'fora';
+        const title=`${p.nome}, ${n} jogadores: ${c.status==='—'?'incompatível':labelStatus[c.status]||c.status}${c.eligible?', posição '+c.rank+' de '+c.total:''}`;
+        return `<td>${c.eligible?`<button type="button" class="fit-cell ${cls}" title="${esc(title)}" aria-label="${esc(title)}; abrir ranking" data-gotable="${esc(p.id)}|${n}"><b>${esc(label)}</b><small>${esc(sub)}</small></button>`:`<div class="fit-cell inactive" title="${esc(title)}" aria-label="${esc(title)}"><b>${esc(label)}</b><small>${esc(sub)}</small></div>`}</td>`;
+      }).join('')}</tr>`).join('')}</tbody></table>`;
+      $('gameMatrixNote').textContent=`Posição calculada pelo ranking completo da mesa (não apenas o Top 10), usando o peso atual das tuas notas: ${personal.peso}%. ${state.variantes?'Variantes habilitadas, mas mantidas como não oficiais.':'Variantes não oficiais desabilitadas.'} Onde constar “não indicado”, o jogo foi avaliado como inadequado para o perfil, mesmo que suporte aquela quantidade.`;
+    }
+    function showMode(mode,scroll=false){
+      state.mode=mode==='jogo'?'jogo':'mesa';
+      $('mesaControls').hidden=state.mode==='jogo';
+      $('resultados').hidden=state.mode==='jogo';
+      $('consultaJogo').hidden=state.mode!=='jogo';
+      $('tabMesa').classList.toggle('active',state.mode==='mesa');
+      $('tabJogo').classList.toggle('active',state.mode==='jogo');
+      $('tabMesa').setAttribute('aria-selected',String(state.mode==='mesa'));
+      $('tabJogo').setAttribute('aria-selected',String(state.mode==='jogo'));
+      if(state.mode==='jogo')renderGameView();
+      updateURL();
+      if(scroll)(state.mode==='jogo'?$('consultaJogo'):$('resultados')).scrollIntoView({behavior:'smooth',block:'start'});
+    }
+    function openGame(id){
+      if(!DATA.jogos.some(g=>g.id===id))return;
+      state.gameId=id;showMode('jogo',true);
+    }
+    function icon(g){
+      const n=g.nome.toLowerCase();
+      if(/skull|pirat|sea|survive|captain|confronto/.test(n))return '⚓';
+      if(/magical|king of tokyo|geeks|trolls|dungeons/.test(n))return '⚔';
+      if(/spicy|claim|cockroach/.test(n))return '⚄';
+      if(/ethnos|cyclades|small world|tiranos|war/.test(n))return '♛';
+      if(/codenames|hat|agent/.test(n))return '✦';
+      return '◈';
+    }
+    function hashHue(g){let n=0;for(const c of g.nome)n=((n*31)+c.charCodeAt(0))%360;return n}
+    function variantDetails(g){
+      if(!isVariant(g.selectionStatus))return '';
+      const x=g.variante;
+      const setup=x?.montagem||(g.nome==='Small World of Warcraft' && state.pessoas===6?'Variante comunitária para 6 jogadores; não é oficial.':'Variante não oficial: validar com o grupo.');
+      const caution=x?.ressalva||'Adaptação não validada em partidas suficientes.';
+      return `<p><strong>Como adaptar:</strong> ${esc(setup)}</p><p><strong>Atenção:</strong> ${esc(caution)}</p>`;
+    }
+    function renderCards(list){
+      if(!list.length){$('resultGrid').innerHTML='<div class="no-results">Não há jogos recomendáveis com esse filtro. Tente permitir variantes ou escolher outra quantidade de pessoas.</div>';return}
+      $('resultGrid').innerHTML=list.map((g,i)=>{
+        const top=i===0,isvar=isVariant(g.selectionStatus);
+        const statusLabel=labelStatus[g.selectionStatus]||g.selectionStatus;
+        const statusClass=isvar?'variant':g.selectionStatus==='PRIORIDADE'?'ideal':'';
+        const support=getSupport(g);
+        const supportClass=support==='Com expansão'||support==='Requer expansão'?'expan':'';
+        const extras=g.ajustes?.[String(state.pessoas)];
+        const isSkull=g.nome==='Skull King';
+        const mytag=g.my.has?`<span class="tag personal">★ Minha nota ${g.my.display.toFixed(1).replace('.',',')}/5${g.my.scope==='especifica'?' · '+state.pessoas+' pessoas':''}</span>`:'';
+        return `<article class="game-card ${top?'featured':''}" aria-label="Posição ${i+1}, ${esc(g.nome)}">
+          <div class="game-visual" aria-hidden="true" style="--hue:${hashHue(g)}"><span class="rank">#${String(i+1).padStart(2,'0')}</span><span class="symbol">${icon(g)}</span></div>
+          <div class="game-content"><div class="tags"><span class="tag ${statusClass}">${esc(statusLabel)}</span><span class="tag ${supportClass}">${esc(support)}</span>${mytag}</div><h3 class="game-title"><button class="title-button" type="button" data-viewgame="${esc(g.id)}" aria-label="Ver os melhores grupos para ${esc(g.nome)}">${esc(g.nome)}</button></h3><div class="game-meta">${esc(g.jogadores)} jogadores no catálogo</div><p class="game-description">${esc(g.observacao)}</p>
+          <div class="card-links"><button class="viewgame-link" type="button" data-viewgame="${esc(g.id)}">⌕ Ver melhores mesas</button><button class="rate-link" type="button" data-rate="${esc(g.id)}">★ ${g.my.has?'Editar minhas notas':'Avaliar este jogo'}</button></div>
+          <details class="details"><summary>Por que escolher / cuidados</summary><div class="detail-body">
+            <p><strong>Encaixe para a mesa:</strong> ${esc(g.afinidade[state.perfil])} · ${esc(statusLabel.toLowerCase())} para ${state.pessoas} jogadores.</p>
+            ${extras?`<p><strong>Montagem:</strong> ${esc(extras)}</p>`:''}
+            ${variantDetails(g)}
+            ${isSkull?'<p><strong>Skull King Familiar:</strong> 5 rodadas ímpares, pontuação clássica e sem bônus. A regra resumida está no fim da página.</p>':''}
+            ${g.my.has?`<p><strong>Minha nota:</strong> ${g.my.display.toFixed(1).replace('.',',')}/5 (${g.my.answered} de 5 critérios preenchidos). Peso atual: ${personal.peso}%.</p>`:''}
+            ${g.fonte?`<p><a href="${esc(g.fonte)}" target="_blank" rel="noopener noreferrer">Referência do jogo ↗</a></p>`:''}
+          </div></details></div></article>`;
+      }).join('');
+    }
+    function updateURL(){try{const u=new URL(window.location.href);u.searchParams.set('perfil',state.perfil);u.searchParams.set('jogadores',String(state.pessoas));u.searchParams.set('variantes',state.variantes?'1':'0');u.searchParams.set('modo',state.mode);if(state.mode==='jogo'&&state.gameId)u.searchParams.set('jogo',state.gameId);else u.searchParams.delete('jogo');history.replaceState(null,'',u.toString())}catch(err){}}
+    function render(){
+      const profile=DATA.perfis.find(p=>p.id===state.perfil);
+      $('headerCount').textContent=DATA.jogos.length+' jogos na coleção';
+      $('footerCount').textContent=String(DATA.jogos.length);
+      $('lastUpdated').textContent=dateBR(DATA.versao);
+      $('profileButtons').innerHTML=DATA.perfis.map(p=>`<button class="profile-btn ${p.id===state.perfil?'active':''}" type="button" data-profile="${esc(p.id)}" aria-pressed="${p.id===state.perfil}"><span class="profile-icon" aria-hidden="true">${p.icone}</span><span class="profile-label">${esc(p.nome)}</span></button>`).join('');
+      $('profileDescription').textContent=profile.descricao;
+      $('peopleButtons').innerHTML=Array.from({length:7},(_,i)=>i+2).map(n=>`<button class="number-btn ${n===state.pessoas?'active':''}" type="button" data-people="${n}" aria-pressed="${n===state.pessoas}">${n}</button>`).join('');
+      $('variantInput').checked=state.variantes;
+      latestResults=getBest();
+      const actual=latestResults.length;
+      $('resultsCount').textContent=`${actual} OPÇ${actual===1?'ÃO':'ÕES'} SELECIONADAS · ${DATA.jogos.length} JOGOS ANALISADOS`;
+      $('resultsTitle').textContent=`Top ${actual} · ${profile.nome} · ${state.pessoas} jogadores`;
+      const vcount=latestResults.filter(g=>isVariant(g.selectionStatus)).length;
+      const ratedCount=eligibleGames().filter(g=>ownRatings(g,state.perfil,state.pessoas).has).length;
+      const personalization=ratedCount && personal.peso>0?` Notas pessoais consideradas para ${ratedCount} ${ratedCount===1?'jogo':'jogos'}, com peso de ${personal.peso}%.`:' Ranking inicial, sem influência das notas pessoais nesta combinação.';
+      $('resultsSubtitle').textContent=`Ordem sugerida pela adequação ao grupo.${personalization}${vcount?' '+vcount+' opção(ões) usa(m) variante(s) não oficial(is).':''}`;
+      const notice=$('limitNote');
+      if(actual<10){notice.hidden=false;notice.innerHTML=`<strong>Seleção criteriosa:</strong> encontramos ${actual} ${actual===1?'opção recomendável':'opções recomendáveis'} para essa combinação. Não completamos com jogos incompatíveis${state.variantes?' ou adaptações muito frágeis.':'. Ative variantes para incluir possíveis testes.'}`}
+      else if(vcount){notice.hidden=false;notice.innerHTML=`<strong>Atenção às variantes:</strong> ${vcount} ${vcount===1?'jogo abaixo depende de uma regra não oficial':'jogos abaixo dependem de regras não oficiais'}. Leia a montagem e a ressalva antes de escolher.`}
+      else notice.hidden=true;
+      renderCards(latestResults);
+      renderHistory();
+      $('ratingWeight').value=String(personal.peso);
+      $('weightValue').textContent=`${personal.peso}%`;
+      showMode(state.mode);
+    }
+    async function copyText(s){
+      try{await navigator.clipboard.writeText(s);showToast('Copiado!')}
+      catch(err){const field=document.createElement('textarea');field.value=s;field.style.position='fixed';field.style.left='-9999px';document.body.appendChild(field);field.select();try{document.execCommand('copy');showToast('Copiado!')}catch(x){showToast('Não foi possível copiar neste navegador')}field.remove()}
+    }
+    function renderRules(){const rr=DATA.regrasDaCasa?.regras||[];$('rulesContent').innerHTML=`<table class="rules-table"><thead><tr><th>Regra</th><th>Nosso formato</th><th>Observação</th></tr></thead><tbody>${rr.map(r=>`<tr><td>${esc(r.regra)}</td><td>${esc(r.padrao)}</td><td>${esc(r.nota)}</td></tr>`).join('')}</tbody></table>`}
+    function ratingLabel(){const p=DATA.perfis.find(x=>x.id===state.ratingProfile);return p?.nome||state.ratingProfile}
+    function renderRatingEditor(){
+      const selectedGame=DATA.jogos.find(g=>g.id===state.ratingGameId)||DATA.jogos[0];
+      state.ratingGameId=selectedGame?.id||'';
+      $('ratingGame').innerHTML=DATA.jogos.slice().sort((a,b)=>a.nome.localeCompare(b.nome,'pt-BR')).map(g=>`<option value="${esc(g.id)}">${esc(g.nome)}</option>`).join('');
+      $('ratingGame').value=state.ratingGameId;
+      $('ratingProfile').innerHTML=DATA.perfis.map(p=>`<option value="${esc(p.id)}">${esc(p.nome)}</option>`).join('');
+      $('ratingProfile').value=state.ratingProfile;
+      $('ratingScope').innerHTML=`<option value="geral">${esc(ratingLabel())} · todas as quantidades compatíveis</option><option value="especifico">${esc(ratingLabel())} · somente com ${state.ratingPeople} jogadores</option>`;
+      $('ratingScope').value=state.ratingScope==='geral'?'geral':'especifico';
+      renderRatingFields();
+    }
+    function renderRatingFields(){
+      const scope=state.ratingScope==='geral'?'geral':String(state.ratingPeople);
+      const r=entryFor(state.ratingGameId,state.ratingProfile,scope);
+      const weights=criterionWeights[state.ratingProfile];
+      $('ratingCriteria').innerHTML=criteria.map(c=>`<label class="criterion rating-field"><strong>${esc(c.nome)} <span style="color:#99b0c1;font-size:10px">(${weights[c.id]}%)</span></strong><p>${esc(c.desc)}</p><select data-criterion="${esc(c.id)}" aria-label="${esc(c.nome)}"><option value="">— Ainda não avaliei</option><option value="1">1 — Muito ruim</option><option value="2">2 — Fraco</option><option value="3">3 — Regular</option><option value="4">4 — Bom</option><option value="5">5 — Excelente</option></select></label>`).join('');
+      for(const c of criteria){const val=safeRating(r?.notas?.[c.id]);$('ratingCriteria').querySelector(`[data-criterion="${c.id}"]`).value=val?String(val):''}
+      $('ratingNote').value=String(r?.observacao||'');
+      const specific=state.ratingScope!=='geral';
+      const general=entryFor(state.ratingGameId,state.ratingProfile,'geral');
+      $('ratingScopeHint').textContent=specific?`Essas notas valerão somente para ${state.ratingPeople} jogadores nesse perfil. Critérios não preenchidos aproveitam a avaliação geral, se houver.${general?' Já há uma avaliação geral registrada.':''}`:'Essas notas valerão para qualquer quantidade compatível desse perfil. Também podes criar uma avaliação particular para 2–8 jogadores.';
+      $('ratingSavedLabel').textContent=r?'Avaliação carregada; podes editar.':'Ainda sem avaliação nesse contexto.';
+      $('deleteRating').disabled=!r;
+      $('deleteRating').style.opacity=r?'1':'.45';
+    }
+    function ratingsTotal(){return Object.keys(personal.avaliacoes).length}
+    function entryMean(e){
+      const nums=criteria.map(c=>safeRating(e.notas?.[c.id])).filter(Boolean);
+      return nums.length?nums.reduce((a,b)=>a+b,0)/nums.length:null;
+    }
+    function renderHistory(){
+      const items=Object.entries(personal.avaliacoes).map(([key,e])=>({key,e})).filter(({key})=>{
+        const [id,p,n]=key.split('|');return DATA.jogos.some(g=>g.id===id)&&allowedProfiles.includes(p)&&['geral','2','3','4','5','6','7','8'].includes(n);
+      }).sort((a,b)=>String(b.e.atualizadaEm||'').localeCompare(String(a.e.atualizadaEm||'')));
+      const count=items.length;
+      $('ratingCount').textContent=`${count} ${count===1?'avaliação registrada':'avaliações registradas'}`;
+      $('historyHint').textContent=count?`${Math.min(count,8)} últimas · toque para editar`:'Aparecerão aqui após salvar';
+      if(!count){$('ratingHistory').innerHTML='<div class="history-empty">Quando avaliares um jogo, o registro aparecerá aqui e influenciará os rankings das mesas correspondentes.</div>';return}
+      $('ratingHistory').innerHTML=items.slice(0,8).map(({key,e})=>{
+        const [id,p,n]=key.split('|'),g=DATA.jogos.find(x=>x.id===id),profile=DATA.perfis.find(x=>x.id===p);
+        const value=entryMean(e);
+        return `<button class="history-item" type="button" data-editrating="${esc(key)}"><span>${esc(g.nome)}<small>${esc(profile.nome)} · ${n==='geral'?'Todas as quantidades':n+' jogadores'}</small></span><b>${value==null?'Nota pendente':'★ '+value.toFixed(1).replace('.',',')+'/5'}</b></button>`;
+      }).join('');
+    }
+    function saveCurrent(){
+      const scope=state.ratingScope==='geral'?'geral':String(state.ratingPeople);
+      const notas={};
+      for(const c of criteria){const val=safeRating($('ratingCriteria').querySelector(`[data-criterion="${c.id}"]`).value);if(val)notas[c.id]=val}
+      const observacao=$('ratingNote').value.trim().slice(0,1500);
+      if(!Object.keys(notas).length && !observacao){showToast('Escolhe ao menos uma nota ou escreve uma observação.');return}
+      personal.avaliacoes[ratingKey(state.ratingGameId,state.ratingProfile,scope)]={notas,observacao,atualizadaEm:new Date().toISOString()};
+      savePersonal();render();renderRatingFields();showToast('Avaliação salva! Ranking atualizado.');
+    }
+    function deleteCurrent(){
+      const key=ratingKey(state.ratingGameId,state.ratingProfile,state.ratingScope==='geral'?'geral':String(state.ratingPeople));
+      if(!personal.avaliacoes[key])return;
+      delete personal.avaliacoes[key];savePersonal();render();renderRatingFields();showToast('Avaliação removida.');
+    }
+    function openRating(gameId,profile=state.perfil,scope='geral'){
+      state.ratingGameId=gameId;state.ratingProfile=profile;state.ratingScope=scope==='geral'?'geral':'especifico';
+      state.ratingPeople=scope==='geral'?state.pessoas:Number(scope);
+      renderRatingEditor();$('avaliacoes').scrollIntoView({behavior:'smooth',block:'start'});
+    }
+    function backupData(){
+      return {aplicativo:'Mesa Certa',formato:1,versaoColecao:DATA.versao,exportadoEm:new Date().toISOString(),pesoDasNotas:personal.peso,
+        avaliacoes:Object.entries(personal.avaliacoes).map(([key,e])=>{
+          const [id,perfil,jogadores]=key.split('|');
+          return {jogoId:id,jogo:DATA.jogos.find(g=>g.id===id)?.nome||id,perfil,jogadores,notas:e.notas||{},observacao:e.observacao||'',atualizadaEm:e.atualizadaEm||''};
+        })};
+    }
+    function exportRatings(){
+      const str=JSON.stringify(backupData(),null,2);
+      const blob=new Blob([str],{type:'application/json;charset=utf-8'});
+      const url=URL.createObjectURL(blob),a=document.createElement('a');
+      a.href=url;a.download='Mesa_Certa_Minhas_Avaliacoes.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);
+      showToast('Backup baixado. Guarda o arquivo para futuras atualizações.');
+    }
+    async function importRatings(file){
+      if(!file)return;
+      try{
+        if(file.size>2000000)throw new Error('Arquivo muito grande para avaliações.');
+        const x=JSON.parse(await file.text());
+        if(x.aplicativo!=='Mesa Certa'||x.formato!==1||!Array.isArray(x.avaliacoes))throw new Error('Formato de backup inválido.');
+        const validIds=new Set(DATA.jogos.map(g=>g.id));
+        let count=0,skipped=0;
+        for(const a of x.avaliacoes){
+          const id=String(a?.jogoId||''),perfil=String(a?.perfil||''),scope=String(a?.jogadores||'');
+          if(!validIds.has(id)||!allowedProfiles.includes(perfil)||!['geral','2','3','4','5','6','7','8'].includes(scope)){skipped++;continue}
+          const notas={};
+          for(const c of criteria){const v=safeRating(a?.notas?.[c.id]);if(v)notas[c.id]=v}
+          const observacao=String(a?.observacao||'').slice(0,1500);
+          if(!Object.keys(notas).length&&!observacao){skipped++;continue}
+          personal.avaliacoes[ratingKey(id,perfil,scope)]={notas,observacao,atualizadaEm:String(a.atualizadaEm||new Date().toISOString())};count++;
+        }
+        personal.peso=safeWeight(x.pesoDasNotas);
+        savePersonal();render();renderRatingEditor();
+        showToast(`${count} ${count===1?'avaliação importada':'avaliações importadas'}${skipped?' · '+skipped+' ignoradas':''}.`);
+      }catch(err){showToast('Não foi possível importar: '+String(err.message||err).slice(0,95))}
+    }
+    function setupRatingUI(){
+      state.ratingGameId=DATA.jogos[0]?.id||'';
+      renderRatingEditor();
+      $('ratingGame').addEventListener('change',e=>{state.ratingGameId=e.target.value;renderRatingFields()});
+      $('ratingProfile').addEventListener('change',e=>{state.ratingProfile=e.target.value;renderRatingEditor()});
+      $('ratingScope').addEventListener('change',e=>{state.ratingScope=e.target.value==='geral'?'geral':'especifico';renderRatingFields()});
+      $('saveRating').addEventListener('click',saveCurrent);
+      $('deleteRating').addEventListener('click',deleteCurrent);
+      $('ratingWeight').addEventListener('input',e=>{$('weightValue').textContent=safeWeight(e.target.value)+'%'});
+      $('ratingWeight').addEventListener('change',e=>{personal.peso=safeWeight(e.target.value);savePersonal();render();showToast('Novo peso aplicado às recomendações.');});
+      $('jumpRating').addEventListener('click',()=>openRating(state.ratingGameId||DATA.jogos[0].id,state.perfil,'geral'));
+      $('exportRatings').addEventListener('click',exportRatings);
+      $('importRatings').addEventListener('click',()=>$('ratingFile').click());
+      $('ratingFile').addEventListener('change',async e=>{await importRatings(e.target.files[0]);e.target.value=''});
+    }
+    document.addEventListener('click',e=>{
+      const view=e.target.closest('[data-viewmode]');if(view){showMode(view.dataset.viewmode,true);return}
+      const viewgame=e.target.closest('[data-viewgame]');if(viewgame){openGame(viewgame.dataset.viewgame);return}
+      const table=e.target.closest('[data-gotable]');if(table){const [p,n]=table.dataset.gotable.split('|');if(!allowedProfiles.includes(p))return;state.perfil=p;state.pessoas=Number(n);state.ratingProfile=p;state.ratingPeople=Number(n);render();renderRatingEditor();showMode('mesa',true);return}
+      const p=e.target.closest('[data-profile]');if(p){state.perfil=p.dataset.profile;state.ratingProfile=state.perfil;render();renderRatingEditor();return}
+      const n=e.target.closest('[data-people]');if(n){state.pessoas=Number(n.dataset.people);state.ratingPeople=state.pessoas;render();renderRatingEditor();return}
+      const r=e.target.closest('[data-rate]');if(r){openRating(r.dataset.rate,state.perfil,'geral');return}
+      const h=e.target.closest('[data-editrating]');if(h){const [id,profile,scope]=h.dataset.editrating.split('|');openRating(id,profile,scope);return}
+    });
+    $('variantInput').addEventListener('change',e=>{state.variantes=e.target.checked;render()});
+    $('gameSelect').addEventListener('change',e=>{state.gameId=e.target.value;renderGameView();updateURL()});
+    $('gameVariantInput').addEventListener('change',e=>{state.variantes=e.target.checked;render()});
+    $('gameBackToMesa').addEventListener('click',()=>showMode('mesa',true));
+    $('gameGoRating').addEventListener('click',()=>openRating(state.gameId,state.perfil,'geral'));
+    $('gameCopyLink').addEventListener('click',()=>{if(window.location.protocol==='file:'){showToast('Para compartilhar o link deste jogo, publique o site na internet.');return}copyText(window.location.href);showToast('Link do jogo copiado. As tuas notas ficam neste navegador.');});
+    $('copyList').addEventListener('click',()=>{const p=DATA.perfis.find(x=>x.id===state.perfil);const msg=[`MESA CERTA — ${p.nome} · ${state.pessoas} jogadores`,...latestResults.map((g,i)=>`${i+1}. ${g.nome} — ${getSupport(g)}${g.my.has?' · minha nota '+g.my.display.toFixed(1).replace('.',',')+'/5':''}`),'',`Coleção pessoal · ${dateBR(DATA.versao)} · minhas notas ${personal.peso}%`].join('\n');copyText(msg)});
+    $('copyLink').addEventListener('click',()=>{if(window.location.protocol==='file:'){showToast('Para compartilhar um link, primeiro publique o site na internet.');return}copyText(window.location.href);showToast('Link copiado! Atenção: avaliações ficam só no teu navegador.');});
+    setupRatingUI();renderRules();render();
+    if(window.location.protocol==='http:'||window.location.protocol==='https:'){
+      fetch('./dados/colecao.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('data file unavailable');return r.json()}).then(d=>{
+        if(Array.isArray(d.jogos)&&Array.isArray(d.perfis)&&d.escolhasRapidas){DATA=d;renderRules();renderRatingEditor();render()}
+      }).catch(()=>{/* the embedded data remains functional offline or without fetch */});
+    }
+  })();
+  </script>
+</body>
+</html>
