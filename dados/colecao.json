@@ -1,6 +1,6 @@
 {
   "versao": "2026-11-06",
-  "origem": "Mesa Certa: 40 jogos-base ativos; doações removidas em 06/11/2026. Rankings editoriais complementados por avaliações pessoais salvas localmente.",
+  "origem": "Mesa Certa v4: catálogo editorial preexistente + 40 avaliações próprias (8 critérios) importadas em 06/11/2026. As notas são públicas no JSON; critérios de intensidade tratados como adequação por perfil.",
   "perfis": [
     {
       "id": "familia",
@@ -95,7 +95,28 @@
       "observacao": "Confronto direto; menos forte com 2.",
       "fonte": "https://boardgamegeek.com/boardgame/425428/survive-the-island",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 4,
+        "estrategia": 2,
+        "interacao": 5,
+        "rejogabilidade": 5,
+        "empolgacao": 5,
+        "caos": 5,
+        "ritmo": 4
+      },
+      "preferenciaComunidade": {
+        "melhorCom": [
+          4
+        ],
+        "recomendadoCom": [
+          3,
+          4,
+          5
+        ],
+        "fonte": "https://boardgamegeek.com/boardgame/425428/survive-the-island"
+      }
     },
     {
       "id": "magical-athlete-2025",
@@ -158,7 +179,30 @@
       "observacao": "Poderes alteram a corrida; ótimo de 4 a 6.",
       "fonte": "https://boardgamegeek.com/boardgame/454103/magical-athlete",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 5,
+        "estrategia": 2,
+        "interacao": 5,
+        "rejogabilidade": 5,
+        "empolgacao": 5,
+        "caos": 5,
+        "ritmo": 5
+      },
+      "preferenciaComunidade": {
+        "melhorCom": [
+          5,
+          6
+        ],
+        "recomendadoCom": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "fonte": "https://boardgamegeek.com/boardgame/454103/magical-athlete"
+      }
     },
     {
       "id": "tiranos-da-umbreterna-2021",
@@ -221,7 +265,17 @@
       "observacao": "Deckbuilding e controle de área; exige mais explicação.",
       "fonte": "https://boardgamegeek.com/boardgame/336847/tyrants-of-the-underdark-board-game",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 3,
+        "estrategia": 4,
+        "interacao": 5,
+        "rejogabilidade": 5,
+        "empolgacao": 4,
+        "caos": 4,
+        "ritmo": 2
+      }
     },
     {
       "id": "small-world-of-warcraft",
@@ -293,6 +347,16 @@
       },
       "ajustes": {
         "6": "Uso de variante da comunidade: não é modo oficial."
+      },
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 3,
+        "estrategia": 5,
+        "interacao": 5,
+        "rejogabilidade": 5,
+        "empolgacao": 5,
+        "caos": 5,
+        "ritmo": 2
       }
     },
     {
@@ -359,6 +423,16 @@
       "ajustes": {
         "5": "Requer a expansão Bando de Aventureiros.",
         "6": "Requer a expansão Bando de Aventureiros."
+      },
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 3,
+        "estrategia": 4,
+        "interacao": 3,
+        "rejogabilidade": 5,
+        "empolgacao": 5,
+        "caos": 3,
+        "ritmo": 3
       }
     },
     {
@@ -422,7 +496,17 @@
       "observacao": "Regras enxutas, decisões densas; exige reflexão.",
       "fonte": "https://boardgamegeek.com/boardgame/319966/the-king-is-dead-second-edition",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 3,
+        "estrategia": 5,
+        "interacao": 5,
+        "rejogabilidade": 5,
+        "empolgacao": 3,
+        "caos": 4,
+        "ritmo": 3
+      }
     },
     {
       "id": "splendor-pokemon",
@@ -485,7 +569,17 @@
       "observacao": "Estratégia familiar simples, pouco confronto direto.",
       "fonte": "https://boardgamegeek.com/boardgame/406291",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 4,
+        "estrategia": 3,
+        "interacao": 2,
+        "rejogabilidade": 5,
+        "empolgacao": 5,
+        "caos": 3,
+        "ritmo": 3
+      }
     },
     {
       "id": "ethnos-second-edition",
@@ -548,7 +642,17 @@
       "observacao": "Coleções e controle de área; acessível para estratégia.",
       "fonte": "https://boardgamegeek.com/boardgame/432527/ethnos-2nd-edition",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 4,
+        "estrategia": 4,
+        "interacao": 3,
+        "rejogabilidade": 5,
+        "empolgacao": 4,
+        "caos": 3,
+        "ritmo": 4
+      }
     },
     {
       "id": "toy-battle",
@@ -611,7 +715,17 @@
       "observacao": "Duelo veloz e tático, somente 2 pessoas.",
       "fonte": "https://boardgamegeek.com/boardgame/434654/toy-battle",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 5,
+        "estrategia": 4,
+        "interacao": 5,
+        "rejogabilidade": 4,
+        "empolgacao": 4,
+        "caos": 5,
+        "ritmo": 4
+      }
     },
     {
       "id": "king-of-tokyo-monster-box",
@@ -681,7 +795,30 @@
         "parecer": "Apenas para turma que já gosta do jogo.",
         "fonte": "https://boardgamegeek.com/thread/2694001/playing-with-7-plus-players"
       },
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 5,
+        "estrategia": 2,
+        "interacao": 4,
+        "rejogabilidade": 4,
+        "empolgacao": 4,
+        "caos": 5,
+        "ritmo": 4
+      },
+      "preferenciaComunidade": {
+        "melhorCom": [
+          4,
+          5
+        ],
+        "recomendadoCom": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "fonte": "https://boardgamegeek.com/boardgame/336755/king-tokyo-monster-box"
+      }
     },
     {
       "id": "claim-edicao-limitada",
@@ -744,7 +881,29 @@
       "observacao": "Vazas; versão da coleção suporta até 4.",
       "fonte": "https://papergames.com.br/claim-edicao-limitada/",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 5,
+        "estrategia": 3,
+        "interacao": 4,
+        "rejogabilidade": 5,
+        "empolgacao": 4,
+        "caos": 4,
+        "ritmo": 5
+      },
+      "preferenciaComunidade": {
+        "melhorCom": [
+          2
+        ],
+        "recomendadoCom": [
+          2,
+          3,
+          4
+        ],
+        "fonte": "https://boardgamegeek.com/boardgame/370325/claim-anniversary-edition",
+        "fonteEditora": "https://papergames.com.br/claim-edicao-limitada/"
+      }
     },
     {
       "id": "cyclades-legendary-edition",
@@ -809,6 +968,29 @@
       "variante": null,
       "ajustes": {
         "6": "Modo oficial de 3 equipes de 2; confirmar a configuração na edição."
+      },
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 1,
+        "estrategia": 5,
+        "interacao": 4,
+        "rejogabilidade": 5,
+        "empolgacao": 5,
+        "caos": 5,
+        "ritmo": 1
+      },
+      "preferenciaComunidade": {
+        "melhorCom": [
+          4,
+          5
+        ],
+        "recomendadoCom": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "fonte": "https://boardgamegeek.com/boardgame/380619/cyclades-legendary-edition"
       }
     },
     {
@@ -872,7 +1054,17 @@
       "observacao": "Jogo visual leve; não exige confronto intenso.",
       "fonte": "https://boardgamegeek.com/boardgame/449185/fliptoons",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 5,
+        "estrategia": 3,
+        "interacao": 2,
+        "rejogabilidade": 5,
+        "empolgacao": 3,
+        "caos": 2,
+        "ritmo": 4
+      }
     },
     {
       "id": "seas-of-strife",
@@ -942,7 +1134,29 @@
         "parecer": "Priorizar Skull King com 7/8.",
         "fonte": "https://boardgamegeek.com/boardgame/225482/seas-of-strife"
       },
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 4,
+        "estrategia": 3,
+        "interacao": 5,
+        "rejogabilidade": 5,
+        "empolgacao": 4,
+        "caos": 5,
+        "ritmo": 5
+      },
+      "preferenciaComunidade": {
+        "melhorCom": [
+          5,
+          6
+        ],
+        "recomendadoCom": [
+          4,
+          5,
+          6
+        ],
+        "fonte": "https://boardgamegeek.com/boardgame/225482/seas-of-strife"
+      }
     },
     {
       "id": "clank-uma-aventura-de-construcao-de-baralho",
@@ -1008,6 +1222,16 @@
       "ajustes": {
         "5": "Requer a expansão Bando de Aventureiros.",
         "6": "Requer a expansão Bando de Aventureiros."
+      },
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 3,
+        "estrategia": 4,
+        "interacao": 3,
+        "rejogabilidade": 5,
+        "empolgacao": 5,
+        "caos": 3,
+        "ritmo": 3
       }
     },
     {
@@ -1071,7 +1295,17 @@
       "observacao": "3 jogadores: modo oficial 2 contra 1; 4: 2 contra 2.",
       "fonte": "https://boardgamegeek.com/boardgame/422732/agent-avenue",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 3,
+        "facilidade": 5,
+        "estrategia": 3,
+        "interacao": 4,
+        "rejogabilidade": 2,
+        "empolgacao": 2,
+        "caos": 4,
+        "ritmo": 5
+      }
     },
     {
       "id": "tag-team",
@@ -1134,7 +1368,17 @@
       "observacao": "Duelo tático e prático, apenas 2.",
       "fonte": "https://boardgamegeek.com/boardgame/434906/tag-team",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 4,
+        "facilidade": 3,
+        "estrategia": 3,
+        "interacao": 5,
+        "rejogabilidade": 3,
+        "empolgacao": 3,
+        "caos": 5,
+        "ritmo": 3
+      }
     },
     {
       "id": "splendor-marvel",
@@ -1197,7 +1441,17 @@
       "observacao": "Estratégia acessível, menor interação direta.",
       "fonte": "https://boardgamegeek.com/boardgame/293296/splendor-marvel",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 4,
+        "facilidade": 4,
+        "estrategia": 3,
+        "interacao": 2,
+        "rejogabilidade": 4,
+        "empolgacao": 4,
+        "caos": 3,
+        "ritmo": 3
+      }
     },
     {
       "id": "o-senhor-dos-aneis-duelo-pela-terra-media",
@@ -1260,7 +1514,17 @@
       "observacao": "Excelente duelo; precisa explicar símbolos e estratégia.",
       "fonte": "https://boardgamegeek.com/boardgame/421006/the-lord-of-the-rings-duel-for-middle-earth",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 4,
+        "facilidade": 4,
+        "estrategia": 4,
+        "interacao": 4,
+        "rejogabilidade": 4,
+        "empolgacao": 3,
+        "caos": 4,
+        "ritmo": 4
+      }
     },
     {
       "id": "3-capitulos",
@@ -1323,7 +1587,17 @@
       "observacao": "Draft e combinação de cartas em três etapas.",
       "fonte": "https://boardgamegeek.com/boardgame/423517/3-chapters",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 4,
+        "facilidade": 3,
+        "estrategia": 3,
+        "interacao": 2,
+        "rejogabilidade": 4,
+        "empolgacao": 3,
+        "caos": 3,
+        "ritmo": 3
+      }
     },
     {
       "id": "harmonies",
@@ -1386,7 +1660,17 @@
       "observacao": "Quebra-cabeça visual; baixa interação direta.",
       "fonte": "https://boardgamegeek.com/boardgame/414317/harmonies",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 5,
+        "estrategia": 3,
+        "interacao": 2,
+        "rejogabilidade": 5,
+        "empolgacao": 3,
+        "caos": 2,
+        "ritmo": 3
+      }
     },
     {
       "id": "spicy",
@@ -1456,7 +1740,17 @@
         "parecer": "Boa candidata a teste, nunca tratar como oficial.",
         "fonte": "https://boardgamegeek.com/boardgame/299169/spicy"
       },
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 4,
+        "facilidade": 5,
+        "estrategia": 1,
+        "interacao": 5,
+        "rejogabilidade": 3,
+        "empolgacao": 5,
+        "caos": 5,
+        "ritmo": 5
+      }
     },
     {
       "id": "sea-salt-paper",
@@ -1519,7 +1813,17 @@
       "observacao": "Coleções rápidas; regras de pontuação precisam de exemplo.",
       "fonte": "https://boardgamegeek.com/boardgame/367220/sea-salt-and-paper",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 4,
+        "facilidade": 4,
+        "estrategia": 3,
+        "interacao": 3,
+        "rejogabilidade": 4,
+        "empolgacao": 3,
+        "caos": 3,
+        "ritmo": 4
+      }
     },
     {
       "id": "piratas-3a-ed-pets",
@@ -1589,7 +1893,17 @@
         "parecer": "Não indicar como primeira opção.",
         "fonte": "https://ludopedia.com.br/jogo/piratas-3-edicao"
       },
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 4,
+        "estrategia": 2,
+        "interacao": 5,
+        "rejogabilidade": 3,
+        "empolgacao": 5,
+        "caos": 5,
+        "ritmo": 4
+      }
     },
     {
       "id": "fantasy-realms",
@@ -1652,7 +1966,17 @@
       "observacao": "Muitas combinações; exige leitura de efeitos.",
       "fonte": "https://boardgamegeek.com/boardgame/223040/fantasy-realms",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 4,
+        "facilidade": 5,
+        "estrategia": 3,
+        "interacao": 3,
+        "rejogabilidade": 4,
+        "empolgacao": 3,
+        "caos": 2,
+        "ritmo": 4
+      }
     },
     {
       "id": "cascadia",
@@ -1715,7 +2039,17 @@
       "observacao": "Leve a médio; baixa interação direta.",
       "fonte": "https://boardgamegeek.com/boardgame/295947/cascadia",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 4,
+        "facilidade": 4,
+        "estrategia": 3,
+        "interacao": 1,
+        "rejogabilidade": 3,
+        "empolgacao": 3,
+        "caos": 2,
+        "ritmo": 4
+      }
     },
     {
       "id": "captain-flip",
@@ -1778,7 +2112,17 @@
       "observacao": "Escolher e colocar peças; explicação curta.",
       "fonte": "https://boardgamegeek.com/boardgame/393325/captain-flip",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 5,
+        "estrategia": 3,
+        "interacao": 1,
+        "rejogabilidade": 4,
+        "empolgacao": 3,
+        "caos": 2,
+        "ritmo": 4
+      }
     },
     {
       "id": "schotten-totten",
@@ -1841,7 +2185,17 @@
       "observacao": "Duelo de formações e blefe tático.",
       "fonte": "https://boardgamegeek.com/boardgame/372/schotten-totten",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 4,
+        "facilidade": 5,
+        "estrategia": 2,
+        "interacao": 3,
+        "rejogabilidade": 4,
+        "empolgacao": 3,
+        "caos": 3,
+        "ritmo": 5
+      }
     },
     {
       "id": "ascension-edicao-10-anos",
@@ -1904,7 +2258,17 @@
       "observacao": "Deckbuilding acessível, requer aprender mercado/combos.",
       "fonte": "https://boardgamegeek.com/boardgame/325810/ascension-fourth-edition",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 2,
+        "facilidade": 3,
+        "estrategia": 3,
+        "interacao": 2,
+        "rejogabilidade": 3,
+        "empolgacao": 2,
+        "caos": 2,
+        "ritmo": 2
+      }
     },
     {
       "id": "monopoly-pokemon-2025",
@@ -1967,7 +2331,17 @@
       "observacao": "Tema familiar; relativamente longo para churrasco.",
       "fonte": "https://boardgamegeek.com/boardgame/439091/monopoly-pokemon-edition",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 3,
+        "facilidade": 4,
+        "estrategia": 1,
+        "interacao": 3,
+        "rejogabilidade": 4,
+        "empolgacao": 2,
+        "caos": 3,
+        "ritmo": 3
+      }
     },
     {
       "id": "munchkin",
@@ -2037,7 +2411,17 @@
         "parecer": "Não recomendar.",
         "fonte": "https://boardgamegeek.com/boardgame/1927/munchkin"
       },
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 3,
+        "facilidade": 3,
+        "estrategia": 2,
+        "interacao": 3,
+        "rejogabilidade": 3,
+        "empolgacao": 3,
+        "caos": 3,
+        "ritmo": 2
+      }
     },
     {
       "id": "cockroach-poker-royal",
@@ -2107,7 +2491,17 @@
         "parecer": "Teste opcional; 5–6 mais seguro.",
         "fonte": "https://boardgamegeek.com/boardgame/129736/cockroach-poker-royal"
       },
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 4,
+        "facilidade": 5,
+        "estrategia": 2,
+        "interacao": 5,
+        "rejogabilidade": 3,
+        "empolgacao": 4,
+        "caos": 5,
+        "ritmo": 5
+      }
     },
     {
       "id": "medievalia",
@@ -2170,7 +2564,17 @@
       "observacao": "Cartas e interação; menos evidências sobre grupo ideal.",
       "fonte": "https://ludopedia.com.br/jogo/medievalia",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 2,
+        "facilidade": 2,
+        "estrategia": 1,
+        "interacao": 2,
+        "rejogabilidade": 1,
+        "empolgacao": 1,
+        "caos": 2,
+        "ritmo": 2
+      }
     },
     {
       "id": "dungeons-drinks",
@@ -2233,7 +2637,17 @@
       "observacao": "Cartas de humor e confrontos; depende da disposição da mesa.",
       "fonte": "https://boardgamegeek.com/boardgame/313454/dungeons-and-drinks",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 3,
+        "facilidade": 2,
+        "estrategia": 2,
+        "interacao": 1,
+        "rejogabilidade": 3,
+        "empolgacao": 3,
+        "caos": 2,
+        "ritmo": 1
+      }
     },
     {
       "id": "that-s-not-a-hat",
@@ -2303,7 +2717,17 @@
         "parecer": "Recomendado em grupo descontraído.",
         "fonte": "https://boardgamegeek.com/boardgame/375651/thats-not-a-hat"
       },
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 3,
+        "facilidade": 5,
+        "estrategia": 1,
+        "interacao": 4,
+        "rejogabilidade": 2,
+        "empolgacao": 3,
+        "caos": 3,
+        "ritmo": 5
+      }
     },
     {
       "id": "war-game-of-thrones",
@@ -2366,7 +2790,17 @@
       "observacao": "Confronto territorial, mas duração e regras pesam.",
       "fonte": "https://ludopedia.com.br/jogo/war-game-of-thrones",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 4,
+        "facilidade": 3,
+        "estrategia": 3,
+        "interacao": 5,
+        "rejogabilidade": 2,
+        "empolgacao": 4,
+        "caos": 5,
+        "ritmo": 3
+      }
     },
     {
       "id": "o-senhor-dos-aneis-o-confronto",
@@ -2429,7 +2863,17 @@
       "observacao": "Duelo assimétrico e estratégico, apenas 2.",
       "fonte": "https://boardgamegeek.com/boardgame/18833/the-lord-of-the-rings-the-confrontation",
       "variante": null,
-      "ajustes": {}
+      "ajustes": {},
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 4,
+        "estrategia": 4,
+        "interacao": 5,
+        "rejogabilidade": 4,
+        "empolgacao": 4,
+        "caos": 5,
+        "ritmo": 4
+      }
     },
     {
       "id": "geeks-vs-trolls-caos-em-8",
@@ -2502,6 +2946,16 @@
       "ajustes": {
         "7": "Requer a expansão Caos em 8.",
         "8": "Requer a expansão Caos em 8."
+      },
+      "minhasNotas": {
+        "diversao": 4,
+        "facilidade": 5,
+        "estrategia": 2,
+        "interacao": 3,
+        "rejogabilidade": 3,
+        "empolgacao": 3,
+        "caos": 4,
+        "ritmo": 4
       }
     },
     {
@@ -2575,6 +3029,16 @@
       "ajustes": {
         "7": "Duas equipes, normalmente com 4 contra 3.",
         "8": "Duas equipes com 4 pessoas em cada."
+      },
+      "minhasNotas": {
+        "diversao": 4,
+        "facilidade": 5,
+        "estrategia": 2,
+        "interacao": 5,
+        "rejogabilidade": 3,
+        "empolgacao": 4,
+        "caos": 3,
+        "ritmo": 5
       }
     },
     {
@@ -2648,6 +3112,30 @@
       "ajustes": {
         "7": "Nossa versão familiar usa 1, 3, 5, 7 e 9 cartas.",
         "8": "Nossa versão familiar usa 1, 3, 5, 7 e 7 cartas. Baralho de 65 cartas."
+      },
+      "minhasNotas": {
+        "diversao": 5,
+        "facilidade": 4,
+        "estrategia": 2,
+        "interacao": 5,
+        "rejogabilidade": 5,
+        "empolgacao": 5,
+        "caos": 5,
+        "ritmo": 4
+      },
+      "preferenciaComunidade": {
+        "melhorCom": [
+          4,
+          5,
+          6
+        ],
+        "recomendadoCom": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "fonte": "https://boardgamegeek.com/boardgame/150145/skull-king"
       }
     }
   ],
@@ -2948,6 +3436,96 @@
       "Rebel Princess",
       "Trio"
     ],
-    "observacao": "Claim: Edição Limitada permanece; suas duas entradas duplicadas foram retiradas."
+    "observacao": "Claim: Edição Limitada permanece; suas duas entradas duplicadas foram retiradas.",
+    "avaliacoesIncorporadasEm": "2026-11-06",
+    "versaoModeloRecomendacao": "v4.0",
+    "notaAvaliacao": "40 jogos com 8 notas próprias; não foram inferidos perfis nem quantidades diretamente da planilha."
+  },
+  "modeloNotas": {
+    "versao": "v4.0",
+    "referencia": "Minhas notas 06/11/2026",
+    "criterios": {
+      "diversao": "Diversão",
+      "facilidade": "Facilidade de ensinar",
+      "estrategia": "Estratégia (intensidade)",
+      "interacao": "Interação",
+      "rejogabilidade": "Rejogabilidade",
+      "empolgacao": "Empolgação",
+      "caos": "Caos / ataque (intensidade)",
+      "ritmo": "Ritmo / praticidade"
+    },
+    "pesoPessoalPadrao": 60,
+    "pesoEditorialPadrao": 40,
+    "pesoContextualSobrePessoal": 35,
+    "pesosPorPerfil": {
+      "familia": {
+        "diversao": 22,
+        "facilidade": 24,
+        "estrategia": 5,
+        "interacao": 20,
+        "rejogabilidade": 7,
+        "empolgacao": 12,
+        "caos": 2,
+        "ritmo": 8
+      },
+      "casuais": {
+        "diversao": 21,
+        "facilidade": 11,
+        "estrategia": 4,
+        "interacao": 19,
+        "rejogabilidade": 9,
+        "empolgacao": 15,
+        "caos": 13,
+        "ritmo": 8
+      },
+      "estrategicos": {
+        "diversao": 16,
+        "facilidade": 6,
+        "estrategia": 27,
+        "interacao": 14,
+        "rejogabilidade": 16,
+        "empolgacao": 11,
+        "caos": 2,
+        "ritmo": 8
+      },
+      "casais": {
+        "diversao": 23,
+        "facilidade": 16,
+        "estrategia": 8,
+        "interacao": 15,
+        "rejogabilidade": 10,
+        "empolgacao": 12,
+        "caos": 4,
+        "ritmo": 12
+      },
+      "churrasco": {
+        "diversao": 20,
+        "facilidade": 17,
+        "estrategia": 2,
+        "interacao": 22,
+        "rejogabilidade": 3,
+        "empolgacao": 18,
+        "caos": 10,
+        "ritmo": 8
+      }
+    },
+    "alvosDeIntensidade": {
+      "estrategia": {
+        "familia": 2.5,
+        "casuais": 3.0,
+        "estrategicos": null,
+        "casais": 3.0,
+        "churrasco": 1.8
+      },
+      "caos": {
+        "familia": 3.5,
+        "casuais": null,
+        "estrategicos": 3.0,
+        "casais": 3.0,
+        "churrasco": null
+      }
+    },
+    "explicacao": "Índice de adequação do questionário (0–100), distinto de nota de qualidade. Estratégia e caos medem intensidade: os valores ideais variam pelo perfil. Ranking combina índice editorial (40%) com notas pessoais (60%), admite ajustes específicos já existentes (sem apagar localStorage), respeita suportes e identifica variantes.",
+    "regraCautela": "Quantidades incompatíveis nunca se tornam válidas por boas notas; adaptação experimental continua opcional e identificada. BGG melhor/recomendado influencia moderadamente a posição quando disponível."
   }
 }
